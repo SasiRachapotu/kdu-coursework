@@ -84,7 +84,7 @@ public class APIResponseParser {
                 "<author>" +
                 "<id type=\"integer\">10264</id>" +
                 "<name>Henry David Thoreau</name>" +
-                "</author>" +
+        "</author>" +
                 "<image_url>" +
                 "http://images.gr-assets.com/books/1465675526m/16902.jpg" +
                 "</image_url>" +
