@@ -50,8 +50,8 @@ public class SentimentAnalyzer {
 
 
     // This function is to check if the opinion is present in the posOpinion words or negOpinion words according to the parameter (created same function for both opinion words)
-    private static int checkForOpinion(String opinion, String [] OpinionWords){
-        for(String word: OpinionWords){
+    private static int checkForOpinion(String opinion, String [] opinionWords){
+        for(String word: opinionWords){
             if(word.equals(opinion)){
                 return 1;
             }

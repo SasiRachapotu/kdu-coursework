@@ -4,6 +4,9 @@ import java.util.HashMap;
 
 public class StudentUtil {
 
+    private StudentUtil(){
+
+    }
     static double[] calculateGPA(int[] studentList,char[][] studentGrades){
 
         // used Hashmap for storing grades with corresponding values

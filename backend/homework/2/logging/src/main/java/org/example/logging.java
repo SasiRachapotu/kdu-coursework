@@ -9,7 +9,9 @@ public class logging {
     private static final Logger logger = LoggerFactory.getLogger(logging.class);
 
     void logString(StringBuilder str){
-        logger.info(str.toString());
+        if(str!=null) {
+            logger.info(str.toString());
+        }
     }
 
     void logString(String str){

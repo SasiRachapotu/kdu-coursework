@@ -5,21 +5,18 @@ public class APIResponseParser {
 
 
     // defined final variables as there are 6 tags defined
-    final static String authorStart = "<name>";
-    final static String authorEnd = "</name>";
+    static final String AUTHOR_START = "<name>";
+    static final String AUTHOR_END = "</name>";
+    static final String PUBLICATION_START = "<original_publication_year type=\"integer\">";
+    static final String PUBLICATION_END = "</original_publication_year>";
+    static final String AVG_RATING_START = "<average_rating>";
+    static final String AVG_RATING_END = "</average_rating>";
+    static final String RATING_COUNT_START = "<ratings_count type=\"integer\">";
+    static final String RATING_COUNT_END = "</ratings_count>";
+    static final String IMAGE_START = "<image_url>";
+    static final String IMAGE_END = "</image_url>";
 
-    final static String publicationStart = "<original_publication_year type=\"integer\">";
 
-    final static String publicationEnd = "</original_publication_year>";
-
-    final static String avgRatingStart = "<average_rating>";
-    final static String avgRatingEnd = "</average_rating>";
-
-    final static String ratingCountStart = "<ratings_count type=\"integer\">";
-    final static String ratingCountEnd = "</ratings_count>";
-
-    final static String imageStart = "<image_url>";
-    final static String imageEnd = "</image_url>";
     public static Book parse(String response) {
         Book book = new Book();
 
@@ -33,27 +30,27 @@ public class APIResponseParser {
         book.setTitle(title);
 
         //call parse for author
-        String author = parse(response,authorStart,authorEnd);
+        String author = parse(response,AUTHOR_START,AUTHOR_END);
         // set author
         book.setAuthor(author);
 
         //call parse for publication
-        String publication  = parse(response,publicationStart,publicationEnd);
+        String publication  = parse(response,PUBLICATION_START,PUBLICATION_END);
         //set publication
         book.setPublicationYear(Integer.parseInt(publication));
 
         //call parse for average rating
-        String averageRating = parse(response,avgRatingStart,avgRatingEnd);
+        String averageRating = parse(response,AVG_RATING_START,AVG_RATING_END);
         //set average rating
         book.setAverageRating(Double.parseDouble(averageRating.trim()));
 
         //call parse for rating count
-        String ratingCount = parse(response,ratingCountStart,ratingCountEnd);
+        String ratingCount = parse(response,RATING_COUNT_START,RATING_COUNT_END);
         //set rating count
         book.setRatingsCount(Integer.parseInt(ratingCount.replaceAll(",","")));
 
         //call parse for imageURL
-        String image = parse(response,imageStart,imageEnd);
+        String image = parse(response,IMAGE_START,IMAGE_END);
         //set imageURL
         book.setImageUrl(image);
 
@@ -87,7 +84,7 @@ public class APIResponseParser {
                 "<author>" +
                 "<id type=\"integer\">10264</id>" +
                 "<name>Henry David Thoreau</name>" +
-        "</author>" +
+                "</author>" +
                 "<image_url>" +
                 "http://images.gr-assets.com/books/1465675526m/16902.jpg" +
                 "</image_url>" +
