@@ -47,7 +47,7 @@ public class APIResponseParser {
         //call parse for rating count
         String ratingCount = parse(response,RATING_COUNT_START,RATING_COUNT_END);
         //set rating count
-        book.setRatingsCount(Integer.parseInt(ratingCount.replaceAll(",","")));
+        book.setRatingsCount(Integer.parseInt(ratingCount.replace(",","")));
 
         //call parse for imageURL
         String image = parse(response,IMAGE_START,IMAGE_END);
