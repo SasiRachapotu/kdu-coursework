@@ -1,8 +1,13 @@
 package billing;
 
+import org.example.Logging;
 import org.example.Patient;
 
 public class Billing {
+
+    private Billing(){
+
+    }
 
     public static double[] computePaymentAmount(Patient patient, double amount) {
         double[] payments = new double[2];
@@ -32,7 +37,8 @@ public class Billing {
             return payments;
         }
         catch(NullPointerException E){
-            System.out.println("No plan exists for the user so default rates applied");
+            Logging logging = new Logging();
+            logging.logString("No plan exists for the user so default rates applied");
             payments[0]=0;
             payments[1]=amount-20;
         }

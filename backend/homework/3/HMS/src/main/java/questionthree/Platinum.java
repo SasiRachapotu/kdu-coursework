@@ -1,19 +1,18 @@
-package question3;
+package questionthree;
 
+public class Platinum extends HealthInsurancePlan{
 
-public class Gold extends HealthInsurancePlan{
-
-    public Gold(){
-        setCoverage(0.8);
+    public Platinum(){
+        setCoverage(0.9);
     }
     @Override
     public double computeMonthlyPremium(double salary) {
-        return salary *0.07;
+        return salary*0.08;
     }
 
     // This is for 4th question I have overridden the function to avoid duplicate classes
     @Override
     public double computeMonthlyPremium(double salary, int age, boolean smoking) {
-        return salary*0.07+getOfferedBy().computeMonthlyPremium(this,age,smoking);
+        return salary*0.08+getOfferedBy().computeMonthlyPremium(this,age,smoking);
     }
 }

@@ -1,6 +1,6 @@
-package question3;
+package questionthree;
 
-import question4.InsuranceBrand;
+import questionfour.InsuranceBrand;
 
 public abstract class HealthInsurancePlan {
 

@@ -1,4 +1,4 @@
-package question3;
+package questionthree;
 
 public class Bronze extends HealthInsurancePlan{
 

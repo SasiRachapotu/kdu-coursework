@@ -5,9 +5,9 @@ import org.example.Patient;
 
 public class Main {
 
-    public static Logging logging = new Logging();
+    public static final Logging LOGGING = new Logging();
     public static void logStatement(double first,double second){
-        logging.logString(String.format("Amount to be paid by company: %s Amount to be paid by patient: %s\n", first, second));
+        LOGGING.logString(String.format("Amount to be paid by company: %s Amount to be paid by patient: %s %n", first, second));
 
     }
     public static void main(String[] args) {
@@ -31,7 +31,7 @@ public class Main {
         details.append(patient.getPatientId());
 
 
-        logging.logString(details);
+        LOGGING.logString(details);
 
         // Setting platinum insurance plan
         HealthInsurancePlan insurancePlan = new PlatinumPlan();
@@ -39,7 +39,7 @@ public class Main {
 
         //Payment amount for platinum plan
         double[] payments = Billing.computePaymentAmount(patient, 1000.0);
-        logging.logString("Payment for Platinum\n");
+        LOGGING.logString("Payment for Platinum\n");
         logStatement(payments[0],payments[1]);
 
         //Payment for gold plan
@@ -47,7 +47,7 @@ public class Main {
         patient.setInsurancePlan(insurancePlan);
 
         payments = Billing.computePaymentAmount(patient, 1000.0);
-        logging.logString("Payment for Gold\n");
+        LOGGING.logString("Payment for Gold\n");
         logStatement(payments[0],payments[1]);
 
         //Payment for Silver Plan
@@ -55,7 +55,7 @@ public class Main {
         patient.setInsurancePlan(insurancePlan);
 
         payments = Billing.computePaymentAmount(patient, 1000.0);
-        logging.logString("Payment for Silver\n");
+        LOGGING.logString("Payment for Silver\n");
         logStatement(payments[0],payments[1]);
 
         //Payment for Bronze plan
@@ -63,7 +63,7 @@ public class Main {
         patient.setInsurancePlan(insurancePlan);
 
         payments = Billing.computePaymentAmount(patient, 1000.0);
-        logging.logString("Payment for Bronze\n");
+        LOGGING.logString("Payment for Bronze\n");
         logStatement(payments[0],payments[1]);
 
     }

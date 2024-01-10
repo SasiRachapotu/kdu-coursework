@@ -1,4 +1,4 @@
-package question3;
+package questionthree;
 
 public class Staff extends User{
     private long staffId;

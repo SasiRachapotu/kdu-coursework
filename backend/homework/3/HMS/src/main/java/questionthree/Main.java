@@ -1,4 +1,4 @@
-package question3;
+package questionthree;
 
 import org.example.Logging;
 

@@ -1,6 +1,4 @@
-package question3;
-
-import billing.HealthInsurancePlan;
+package questionthree;
 
 public class Patient extends User{
 
