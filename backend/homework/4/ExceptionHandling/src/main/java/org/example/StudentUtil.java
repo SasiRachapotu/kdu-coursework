@@ -7,7 +7,11 @@ public class StudentUtil {
     private static final char GRADE_C = 'C';
     private static final char MISSING_GRADE = ' ';
 
-    public static Logging logging = new Logging();
+    public static final Logging LOGGING = new Logging();
+
+    private StudentUtil(){
+
+    }
 
     public static double[] calculateGPA(int[] studentIdList, char[][] studentsGrades) throws MissingGradeException {
         if (studentIdList.length != studentsGrades.length) {
@@ -41,7 +45,8 @@ public class StudentUtil {
                     break;
                 case MISSING_GRADE:
                     throw new MissingGradeException(studentId);
-                    // Add more cases if needed for other grades
+                default:
+                    gpa+=0;
             }
         }
 
@@ -49,16 +54,13 @@ public class StudentUtil {
     }
 
     public static int[] getStudentsByGPA(double lower, double higher, int[] studentIdList, char[][] studentsGrades) {
-        if (lower < 0 || higher < 0 || lower > higher) {
-            return null;
-        }
 
         double[] gpaList;
 
         try {
             gpaList = calculateGPA(studentIdList, studentsGrades);
         } catch (MissingGradeException exception) {
-            logging.logString(String.format("%d has a missing grade",exception.getStudentId()));
+            LOGGING.logString(String.format("%d has a missing grade",exception.getStudentId()));
             throw new InvalidDataException(exception);
         }
 

@@ -2,19 +2,19 @@ package org.example;
 
 public class MissingGradeException extends Exception{
 
-    private int studentId;
+    private final int STUDENT_ID;
 
     MissingGradeException(int studentId){
-        this.studentId=studentId;
+        this.STUDENT_ID =studentId;
     }
 
     public int getStudentId() {
-        return studentId;
+        return STUDENT_ID;
     }
 
     @Override
     public String toString() {
-        return "Exception occurred as there is a missing grade for student "+getStudentId();
+        return "Exception occurred as there is a missing grade for student "+ getStudentId();
     }
 }
 

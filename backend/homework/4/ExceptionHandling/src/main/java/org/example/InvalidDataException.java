@@ -2,15 +2,15 @@ package org.example;
 
 public class InvalidDataException extends RuntimeException{
 
-    Exception exception;
+    final Exception EXCEPTION;
     InvalidDataException(Exception exception){
-        this.exception = exception;
+        this.EXCEPTION = exception;
     }
 
     @Override
     public String toString() {
         return "InvalidDataException{" +
-                "exception=" + exception +
+                "exception=" + EXCEPTION +
                 '}';
     }
 }

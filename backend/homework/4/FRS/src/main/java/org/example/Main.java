@@ -5,14 +5,14 @@ import java.util.List;
 
 public class Main {
 
-    public static Logging logging = new Logging();
+    public static final Logging LOGGING = new Logging();
     public static void printConfirmedList(List<Passenger> confirmedList){
         StringBuilder stringBuilder = new StringBuilder("Confirmed List: ");
         for (Passenger passenger : confirmedList) {
             stringBuilder.append(passenger.getConfirmationNumber());
             stringBuilder.append(" ");
         }
-        logging.logString(stringBuilder);
+        LOGGING.logString(stringBuilder);
 
     }
     public static void main(String[] args) {
@@ -22,7 +22,7 @@ public class Main {
         // Book flights using a loop
         for (int i = 1; i <= 14; i++) {
             String confirmationNumber = "C" + i;
-            logging.logString(String.format("Booking Status: %b",ticketReservation.bookFlight("Sasi", "Rachapotu", 21, "Male", "business", confirmationNumber)));
+            LOGGING.logString(String.format("Booking Status: %b",ticketReservation.bookFlight("Sasi", "Rachapotu", 21, "Male", "business", confirmationNumber)));
         }
 
         // Display confirmed passengers
