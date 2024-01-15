@@ -1,7 +1,6 @@
 package details;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -15,11 +14,11 @@ public class TransactionsParsing {
     public static JsonNode jsonArray;
     private TransactionsParsing(){}
 
-    public static JsonNode loadTransactions() throws JsonProcessingException {
+    public static JsonNode loadTransactions(String filepath) {
 
         try {
 
-            File file = new File("src/main/resources/small_transaction.json");
+            File file = new File(filepath);
 
             ObjectMapper objectMapper = new ObjectMapper();
 
@@ -33,7 +32,7 @@ public class TransactionsParsing {
         }
         catch (IOException e) {
             Logging.logString("Exception Occured: "+e);
-            throw new RuntimeException(e);
+            Thread.currentThread().interrupt();
         }
 
         return jsonArray;

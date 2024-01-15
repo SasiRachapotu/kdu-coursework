@@ -116,19 +116,16 @@ public class Transaction {
             try {
                 HashMap<String, Long> temp = new HashMap<>();
 
-                if(!coinMap.containsKey(coin)){
                     while(!coinMap.containsKey(coin)){
                         transactionPortfolio.wait();
                     }
-                    Coin coinObject = coinMap.get(coin);
-                    if(coinObject.getQuantity()<quantity){
+                    Coins coinObject = coinMap.get(coin);
                         while (coinObject.getQuantity() < quantity){
                             transactionPortfolio.wait();
                         }
-                    }
-                }
 
-                Coin coin1= coinMap.get(coin);
+
+                Coins coin1= coinMap.get(coin);
                 if(transactionPortfolio.containsKey(walletAddress)){
 
                     temp = transactionPortfolio.get(walletAddress);
@@ -156,6 +153,7 @@ public class Transaction {
             }
             catch(Exception e){
                 Logging.logString(e.toString());
+                Thread.currentThread().interrupt();
             }
         }
     }
@@ -164,7 +162,7 @@ public class Transaction {
 
         synchronized (transactionPortfolio){
 
-            Coin coin1 = coinMap.get(coin);
+            Coins coin1 = coinMap.get(coin);
 
                 while (!transactionPortfolio.containsKey(walletAddress)) {
                     transactionPortfolio.wait();
@@ -196,7 +194,7 @@ public class Transaction {
 
         synchronized (coinMap){
 
-            Coin coin1 = coinMap.get(this.coin);
+            Coins coin1 = coinMap.get(this.coin);
             coin1.setPrice(price);
             coinMap.notifyAll();
         }
@@ -207,7 +205,7 @@ public class Transaction {
     public synchronized void updateVolumeTransaction() {
 
         synchronized (coinMap){
-            Coin coin1 = coinMap.get(coin);
+            Coins coin1 = coinMap.get(coin);
             coin1.setQuantity(coin1.getQuantity() + volume);
             notifyAll();
         }

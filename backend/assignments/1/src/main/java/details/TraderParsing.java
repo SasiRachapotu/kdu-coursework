@@ -13,10 +13,9 @@ public class TraderParsing {
 
     public static void loadTraders(){
 
-        try
+        try(BufferedReader bufferedReader = new BufferedReader(new FileReader("src/main/resources/traders.csv")))
         {
-            FileReader fileReader = new FileReader("src/main/resources/traders.csv");
-            BufferedReader bufferedReader = new BufferedReader(fileReader);
+
             String line;
 
             int count =0;
@@ -38,8 +37,6 @@ public class TraderParsing {
                 count++;
             }
 
-
-            bufferedReader.close();
         }
         catch(Exception e)
         {
@@ -52,14 +49,9 @@ public class TraderParsing {
     }
 
     public static void top5Traders(){
-        List<Map.Entry<String, Double> > list = new LinkedList<Map.Entry<String, Double>> (Lists.portfolioValue.entrySet());
+        List<Map.Entry<String, Double> > list = new LinkedList<> (Lists.portfolioValue.entrySet());
 
-        Collections.sort(list, new Comparator<Map.Entry<String, Double>>() {
-            @Override
-            public int compare(Map.Entry<String, Double> stringDoubleEntry, Map.Entry<String, Double> t1) {
-                    return (t1.getValue()).compareTo(stringDoubleEntry.getValue());
-            }
-        });
+        Collections.sort(list, (stringDoubleEntry, t1) -> (t1.getValue()).compareTo(stringDoubleEntry.getValue()));
 
         for(int i=0;i<5;i++){
             Logging.logString(list.get(i).toString());
@@ -67,14 +59,9 @@ public class TraderParsing {
     }
 
     public static void bottom5Traders(){
-        List<Map.Entry<String, Double> > list = new LinkedList<Map.Entry<String, Double>> (Lists.portfolioValue.entrySet());
+        List<Map.Entry<String, Double> > list = new LinkedList<> (Lists.portfolioValue.entrySet());
 
-        Collections.sort(list, new Comparator<Map.Entry<String, Double>>() {
-            @Override
-            public int compare(Map.Entry<String, Double> stringDoubleEntry, Map.Entry<String, Double> t1) {
-                return (stringDoubleEntry.getValue()).compareTo(t1.getValue());
-            }
-        });
+        Collections.sort(list, Comparator.comparing(Map.Entry::getValue));
 
         for(int i=0;i<5;i++){
             Logging.logString(list.get(i).toString());

@@ -2,9 +2,13 @@ package org.example;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import details.*;
 import logger.Logging;
 
+import java.io.*;
+import java.nio.file.Path;
+import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
@@ -14,7 +18,7 @@ import java.util.concurrent.TimeUnit;
 
 public class Main {
 
-    public static void executeTransactions(JsonNode jsonTransactions, CountDownLatch latch) throws InterruptedException {
+    public static void executeTransactions(JsonNode jsonTransactions, CountDownLatch latch) throws IOException,InterruptedException {
 
         CoinParsing.loadCoins();
 
@@ -62,9 +66,9 @@ public class Main {
 
 
 
-    public static void main(String[] args) throws JsonProcessingException, InterruptedException {
+    public static void main(String[] args) throws JsonProcessingException, InterruptedException,IOException {
 
-        JsonNode jsonTransactions = TransactionsParsing.loadTransactions();
+        JsonNode jsonTransactions = TransactionsParsing.loadTransactions("src/test/resources/test_transaction_1.json");
         CountDownLatch latch = new CountDownLatch(jsonTransactions.size());
 
         executeTransactions(jsonTransactions, latch);
@@ -144,5 +148,41 @@ public class Main {
         CoinParsing.getCoinByCode("ETH");
         CoinParsing.topNCoins(5);
 
+    }
+
+    public static ArrayList<String[]> parseCSV(Path coinCsvPath) throws IOException {
+            try {
+                BufferedReader br = new BufferedReader(new FileReader(coinCsvPath.toString()));
+                ArrayList<String[]> arrayList=new ArrayList<>();
+                int count =0;
+                String entry;
+                while((entry=br.readLine())!=null){
+                    if(count!=0){
+                        String [] ans = entry.split(",");
+                        arrayList.add(ans);
+                    }
+                    count++;
+                }
+
+                return arrayList;
+            } catch (FileNotFoundException e) {
+                Thread.currentThread().interrupt();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+
+            return null;
+        }
+
+    public static JsonNode parseJsonFile(String s) {
+        File file = new File(s);
+        ObjectMapper objectMapper = new ObjectMapper();
+        JsonNode jsonArray=null;
+        try {
+            jsonArray = objectMapper.readTree(file);
+        } catch (IOException e) {
+            Thread.currentThread().interrupt();
+        }
+        return jsonArray;
     }
 }

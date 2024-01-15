@@ -44,7 +44,7 @@ public class ExecuteTransaction implements Runnable{
         }
         catch (InterruptedException e) {
             Logging.logString(e.toString());
-            throw new RuntimeException(e);
+            Thread.currentThread().interrupt();
         }
 
     }
