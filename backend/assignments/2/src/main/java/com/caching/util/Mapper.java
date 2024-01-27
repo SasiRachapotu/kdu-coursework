@@ -24,7 +24,6 @@ public class Mapper {
                 return null;
             }
         } catch (JsonProcessingException e) {
-            e.printStackTrace();
             return null;
         }
     }
