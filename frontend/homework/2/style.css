@@ -1,0 +1,146 @@
+/* explicitly setting the entire page padding and margin to 0 */
+*{
+    margin: 0;
+    padding: 0;
+}
+.heading{
+    text-align: center;
+}
+
+.upperblock{
+    background-image: url(https://images.squarespace-cdn.com/content/v1/587fc3e546c3c40b37363b71/1572274776794-X28FOBF0QUT8T1UPBGHM/Home-Header-Opt-1-Dark.png?format=2500w);
+    background-size: cover;
+    width:100vw;
+    height: 50vh;
+}
+.nav{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;   
+    padding-top: 2rem;
+}
+
+.nav ul li{
+    display: inline-block;
+    margin-right: 2rem;
+}
+
+.nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10vh;
+    /* align-items: center; */
+    margin-left: 25vw;
+    justify-content: center;
+    text-align: left;
+    color: white;
+}
+
+.content-head-1{
+    font-size: 2rem;
+    font-weight: bold;
+}
+.content-head-2{
+    font-size: 4rem;
+    font-weight: bold;
+}
+.content-head-3{
+    font-size: 1.5rem;
+}
+
+/* builders part */
+
+.builders{
+    height: 50vh;
+    display: flex;
+    justify-content:center;
+    align-items: flex-start;
+    margin-top: 5vh;
+    width: 100%;
+}
+.leftbuilders{
+    margin-left: 15%;
+    width: 35%;
+    padding-right: 10%;
+}   
+.leftbuilders p{
+    font-size: 2rem;
+    color: rgb(10, 10, 92);
+    font-weight: bold;
+}
+
+.leftbuilders ol li{
+    font-size: 1.5rem;
+}
+.rightbuilder{
+    text-align: center;
+    width:35%;
+}
+
+.rightbuilder h1{
+    font-size: 4rem;
+    color: rgb(10, 10, 92);
+}
+
+.rightbuilder h6{
+    font-size: 1.5rem;
+    font-weight: lighter;
+}
+
+/* Ceo part */
+
+.ceo{
+    width: 100%;
+    height:40vh;
+    background-image: url(https://images.squarespace-cdn.com/content/v1/587fc3e546c3c40b37363b71/1686772620553-P2R67UHSVJR96HOQ2PXC/Diligence-Header-Opt-3.png?format=2500w);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    color: white;
+}
+
+.imagecontainer{
+    width: 50%;
+    margin-left:18vw;
+}
+
+.image{
+    background-image: url(https://cdn-icons-png.flaticon.com/512/149/149071.png);
+    background-size: cover;
+    height: 21vh;
+    width: 11vw;
+}
+
+.about{
+    width: 80%;
+    font-size: 1.8rem;
+}
+
+.sampleimages{
+    margin:2rem;
+}
+
+.form{
+    display: flex;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 5rem;
+    background-color: black;
+    color: white;
+}
