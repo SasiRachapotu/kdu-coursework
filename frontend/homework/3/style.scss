@@ -1,0 +1,175 @@
+.main-container {
+    background-color: white;
+    box-shadow: 0.2rem 0.2rem 0.2rem 0.2rem rgb(188, 188, 188);
+    font-family: sans-serif;
+    margin: 2rem;
+    padding: 2rem;
+    width: 94%;
+    height: 94%;
+}
+
+.main-container {
+    font-size: 2.4rem;
+    color: gray;
+    .heading-container {
+        .city {
+            color: black;
+            font-size: 7rem;
+        }
+    }
+
+    .temperature {
+        display: flex;
+        justify-content: space-between;
+        .degree {
+            display: flex;
+            .image-container {
+                .image {
+                    margin-right: 0.5rem;
+                    height: 15vh;
+                    width: 10vw;
+                    background-image: url(cloudy.png);
+                    background-size: cover;
+                }
+            }
+            .degree-fer {
+                font-size: 7rem;
+                color: black;
+                sup {
+                    margin: 0 0.2rem;
+                    color: gray;
+                    font-size: 2.7rem;
+                    line-height: 5rem;
+                    position: relative;
+                    top: -0.3rem;
+                }
+                .temp-deg{
+                    font-size: 1rem;
+                }
+            }
+        }
+        .details {
+            margin-right: 25vw;
+            .details-digit{
+                color: black;
+            }
+        }
+    }
+
+    .all-days{
+        display: flex;
+        justify-content: space-between;
+        margin: 0rem;
+        margin-left: 0rem;
+        margin-top: 7rem;
+        .today{
+            .whether-image-container{
+                .today-image{
+                    background-image: url(thunder.png);
+                    width: 7vw;
+                    height: 13vh;
+                    background-size: cover;
+                }
+            }
+        }
+        .name{
+            // font-weight: bold;
+            color: black;
+            margin-bottom: 0.8rem;
+        }
+        .day-width{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width:13%;
+        }
+        .whether-temp{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1.2rem;
+            width: 70%;
+        }
+        .pollen-count{
+            display: flex;
+            justify-content: space-between;
+            width: 70%;
+            font-size: 2.4rem;
+        }
+
+        sup{
+            font-size: 1.5rem;
+            margin: 0.2rem;
+            margin-top: -0.2rem;
+        }
+        .day{
+            color: black;
+        }
+
+        .wednesday{
+            .whether-image-container{
+                .wednesday-image{
+                    background-image: url(sunny.png);
+                    width: 7vw;
+                    height: 13vh;
+                    background-size: cover;
+                }
+            }
+        }
+
+        .thursday{
+            .whether-image-container{
+                .thursday-image{
+                    background-image: url(sunny.png);
+                    width: 7vw;
+                    height: 13vh;
+                    background-size: cover;
+                }
+            }
+        }
+
+        .friday{
+            .whether-image-container{
+                .friday-image{
+                    background-image: url(partly\ cloudy.png);
+                    width: 7vw;
+                    height: 13vh;
+                    background-size: cover;
+                }
+            }
+        }
+
+        .saturday{
+            .whether-image-container{
+                .saturday-image{
+                    background-image: url(rain.png);
+                    width: 7vw;
+                    height: 13vh;
+                    background-size: cover;
+                }
+            }
+        }
+
+        .sunday{
+            .whether-image-container{
+                .sunday-image{
+                    background-image: url(rain.png);
+                    width: 7vw;
+                    height: 13vh;
+                    background-size: cover;
+                }
+            }
+        }
+
+        .monday{
+            .whether-image-container{
+                .monday-image{
+                    background-image: url(partly\ cloudy.png);
+                    width: 7vw;
+                    height: 13vh;
+                    background-size: cover;
+                }
+            }
+        }
+        
+    }
+}
