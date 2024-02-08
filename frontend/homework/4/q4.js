@@ -26,4 +26,4 @@ for(let i in obj){
     }
 }
 
-console.log(newJson)
+console.log(JSON.stringify(newJson))
