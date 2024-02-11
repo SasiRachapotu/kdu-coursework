@@ -16,10 +16,10 @@ describe("Navigation Section", () => {
 
     cy.then(() => {
       // Ensure the navigation-section element is visible in the viewport
-      cy.get(".navigation-section").should("be.visible");
+      cy.get(".desktop-view-1").should("be.visible");
 
       // Capture screenshot of the navigation section
-      cy.get(".navigation-section").compareSnapshot(
+      cy.get(".desktop-view-1").compareSnapshot(
         "provided-navigation",
         Cypress.env("TEST_THRESHOLD")
       );
@@ -43,10 +43,10 @@ describe("Navigation Section", () => {
     cy.get(".profile-icon").click();
 
     // Ensure the navigation-section element is visible in the viewport
-    cy.get(".navigation-section").should("be.visible");
+    cy.get(".mobile-nav-section").should("be.visible");
 
     // Capture screenshot of the navigation section
-    cy.get(".navigation-section").compareSnapshot(
+    cy.get(".mobile-nav-section").compareSnapshot(
       "MV-provided-navigation",
       Cypress.env("TEST_THRESHOLD")
     );
