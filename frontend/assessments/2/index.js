@@ -299,15 +299,29 @@ socket.on("stock-update",(updprice)=>{
     let arrow = document.querySelector(".arrow");
     let difference = document.querySelector(".difference");
 
+    let candleStickBox = document.querySelector(".candle-stick-box");
+
 
     if(cv>updprice){
+        console.log("==========");
         arrow.innerHTML="&#2193";
-        difference.style.color="#2f9e44";
+        difference.style.color="#e03131";
+        let add = document.createElement("div");
+        add.style.backgroundColor="#e03131";
+        add.style.height=`${cv-updprice}px`;
+        console.log(cv-updprice);
+        add.style.width="20px";
+        candleStickBox.appendChild(add);
     }
     else{
         arrow.innerHTML="&#8593";
-        difference.style.color="#e03131"
-        
+        difference.style.color="#2f9e44"
+        let add = document.createElement("div");
+        add.style.backgroundColor="#2f9e44";
+        add.style.height= `${updprice-cv}px`;
+        console.log(updprice-cv);
+        add.style.width="20px";
+        candleStickBox.appendChild(add);   
     }
     price.innerText=updprice;
 })
