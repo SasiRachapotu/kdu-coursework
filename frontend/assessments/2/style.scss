@@ -1,0 +1,193 @@
+header{
+    background-color: #1871c2;
+    color: white;
+    h1{
+        padding: 1rem;
+    }
+}
+
+.main-container{
+    display: flex;
+    height: 80vh;
+    .first-half{
+        margin: 1rem;
+        width: 75%;
+        .stock-details{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            .logo-name{
+                display: flex;
+                align-items: center;
+                padding: 1rem;
+                width: 30%;
+                height: 6vh;
+                border: 1px solid #000;
+                .logo{
+                    background-image: url(zomato\ image.jpg);
+                    width: 20%;
+                    height: 9vh;
+                    background-size: cover;
+                    margin-right: 5rem;
+
+                }
+                .name{
+                    font-size: 1.2rem;
+
+                }
+            }
+
+            .price-details{
+                border: 1px solid #000;
+                display: flex;
+                font-size: 1.2rem;
+                width: 30%;
+                justify-content: space-evenly;
+                align-items: center;
+
+                .difference{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    color: #2f9e44;
+                    .arrow{
+                        font-size: 3rem;
+                        color: #2f9e44;
+                    }
+                }
+            }
+
+            .enter-quantity{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 30%;
+                font-size: 1.2rem;
+                height: 10vh;
+                #quantity{
+                    padding: 0;
+                    height: 10vh;
+                    font-size: 1.2rem;
+                    text-align: center;
+                }
+
+                .buy{
+                    display: flex;
+                    border: 1px solid #2f9e44;
+                    background-color: #b2f2bb;
+                    color: #2f9e44;
+                    padding: 1vh;
+                    height: 8vh;
+                    align-items: center;
+
+                }
+
+                .sell{
+                    color: #e03131;
+                    border: 1px solid #e03131;
+                    background-color: #ffc9c9;
+                    padding: 1vh;
+                    height: 8vh;
+                    display: flex;
+                    align-items: center;
+                }
+            }
+        }
+
+        .candle-stick-box{
+            margin: 1rem;
+            margin-top: 5rem;
+            height: 500px;
+            border: 1px solid black;
+        }
+    }
+
+    .second-half{
+        padding: 1rem;
+        font-size: 1.2rem;
+        height: 100%;
+        border: 1px solid black;
+        width: 25%;
+        margin: 1rem;
+
+        .history{
+            font-size: 2rem;
+        }
+        .stock-history::-webkit-scrollbar {
+            display: none;
+          }
+
+        .stock-history{
+            padding: 1rem;
+            overflow: scroll;
+            height: 70vh;
+            overflow-x: hidden;
+
+            .buy-stock{
+                width: 98%;
+                margin-bottom: 1rem;
+                border: 1px solid #000;
+                padding: 0.5rem;
+                display: flex;
+                border-radius: 10px;
+                align-items: center;
+                .buy-details{
+                    width: 80%;
+                    .buy-qty-stocks{
+                        display: flex;
+                        font-size: 1.6rem;
+                        .buy-qty{
+                            margin-right: 0.3rem;
+                        }
+                        .stocks{
+                            margin-right: 1rem;
+                        }
+                    }
+
+                    .date{
+                        font-size:1.2rem;
+                        margin-top: 1rem;
+                    }
+                }
+
+                .buy-name{
+                    color: #2f9e44;
+                }
+
+            }
+
+            .sell-stock{
+                width: 98%;
+                margin-bottom: 1rem;
+                border: 1px solid #000;
+                padding: 0.5rem;
+                display: flex;
+                border-radius: 10px;
+                align-items: center;
+                .sell-details{
+                    width: 80%;
+                    .sell-qty-stocks{
+                        display: flex;
+                        font-size: 1.6rem;
+                        .sell-qty{
+                            margin-right: 0.3rem;
+                        }
+                        .stocks{
+                            margin-right: 1rem;
+                        }
+                    }
+
+                    .date{
+                        font-size:1.2rem;
+                        margin-top: 1rem;
+                    }
+                }
+
+                .sell-name{
+                    color: #e03131;
+                }
+
+            }
+        }
+    }
+}
