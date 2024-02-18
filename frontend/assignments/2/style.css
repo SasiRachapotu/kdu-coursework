@@ -1,0 +1,886 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins, sans-serif;
+  background-color: black;
+  color: white;
+}
+
+.mobile-view {
+  display: none;
+}
+
+.main-container {
+  margin-top: 0.5rem;
+  display: flex;
+  font-size: 1.2rem;
+}
+.main-container .navigation-section {
+  position: relative;
+  color: white;
+  padding-left: 1rem;
+  padding-top: 0.5rem;
+  width: 20vw;
+  margin-right: 1rem;
+  font-size: 1rem;
+}
+.main-container .navigation-section .nav-icons {
+  width: 2.2vw;
+  margin-right: 1.2rem;
+  fill: white;
+}
+.main-container .navigation-section .home {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+}
+.main-container .navigation-section .twitter-icon {
+  margin-left: 1rem;
+}
+.main-container .navigation-section .nav-divs {
+  margin-left: 1rem;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+}
+.main-container .navigation-section .post {
+  margin-left: 0rem;
+  background-color: #1d9bf0;
+  font-size: 1rem;
+  padding: 0.7rem;
+  text-align: center;
+  margin-top: 1rem;
+  border-radius: 2rem;
+  color: white;
+  margin-right: 1rem;
+  font-weight: bold;
+}
+.main-container .navigation-section .nav-profile-section {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  padding-bottom: 1rem;
+  width: 20vw;
+  justify-content: space-between;
+  height: 8vh;
+}
+.main-container .navigation-section .nav-profile-section .photo-name {
+  display: flex;
+  margin-left: 0.5rem;
+}
+.main-container .navigation-section .nav-profile-section .photo-name .photo-container .photo {
+  height: 3.8vw;
+  width: 3.8vw;
+  background-image: url("profile pic.png");
+  background-size: cover;
+  border-radius: 2rem;
+  margin-right: 0.6rem;
+}
+.main-container .navigation-section .nav-profile-section .photo-name .name {
+  font-size: 0.9rem;
+}
+.main-container .navigation-section .nav-profile-section .photo-name .name .userid {
+  position: relative;
+  bottom: 0.2rem;
+  font-size: 0.9rem;
+  color: gray;
+}
+.main-container .tweet-section {
+  width: 60vw;
+  padding-top: 0.5rem;
+}
+.main-container .tweet-section .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem;
+}
+.main-container .tweet-section .header .for-you {
+  width: 40%;
+  text-align: center;
+  border-bottom: 3px solid #1d9bf0;
+  padding: 0.3rem;
+}
+.main-container .tweet-section .header .following {
+  text-align: center;
+  width: 40%;
+  padding: 0.3rem;
+}
+.main-container .tweet-section .header .setting {
+  fill: white;
+  width: 2.2vw;
+}
+.main-container .tweet-section .tweet-first {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+}
+.main-container .tweet-section .tweet-first .profile .tweet-profile-image {
+  height: 3.8vw;
+  width: 3.8vw;
+  background-image: url("profile pic.png");
+  background-size: cover;
+  border-radius: 2rem;
+  margin-right: 0.8rem;
+}
+.main-container .tweet-section .tweet-first .input-container {
+  height: 100%;
+  width: 100%;
+}
+.main-container .tweet-section .tweet-first .input-container input {
+  height: 100%;
+  width: 100%;
+  font-size: 1.2rem;
+  border: none;
+  color: white;
+  padding: 0.5rem;
+}
+.main-container .tweet-section .tweet-second {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-container .tweet-section .tweet-second .icons {
+  width: 20vw;
+  display: flex;
+  margin-left: 5vw;
+}
+.main-container .tweet-section .tweet-second .icons .tweet-icons {
+  margin-left: 2vw;
+  width: 2vw;
+  fill: #1d9bf0;
+}
+.main-container .tweet-section .tweet-second .btn-container {
+  margin-right: 1rem;
+}
+.main-container .tweet-section .tweet-second .btn-container .tweet-btn {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.7rem;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  border-radius: 2rem;
+  background-color: #1d9bf0;
+  border: none;
+}
+.main-container .tweet-section .posts::-webkit-scrollbar {
+  display: none;
+}
+.main-container .tweet-section .posts {
+  width: 60vw;
+  margin-top: 1rem;
+  padding: 1rem;
+  height: 68vh;
+  overflow: scroll;
+}
+.main-container .tweet-section .posts .testpost .post-first {
+  display: flex;
+}
+.main-container .tweet-section .posts .testpost .post-first .post-test-profile .post-test-profile-image {
+  height: 3.9vw;
+  width: 3.9vw;
+  background-image: url("profile pic.png");
+  background-size: cover;
+  border-radius: 2rem;
+  margin-right: 0.6rem;
+}
+.main-container .tweet-section .posts .testpost .post-first .post-content {
+  width: 100%;
+}
+.main-container .tweet-section .posts .testpost .post-first .post-content .post-content-name-id {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 1rem;
+}
+.main-container .tweet-section .posts .testpost .post-first .post-content .post-content-name-id .main-name {
+  display: flex;
+}
+.main-container .tweet-section .posts .testpost .post-first .post-content .post-content-name-id .main-name .post-content-item {
+  margin-right: 0.5rem;
+}
+.main-container .tweet-section .posts .testpost .post-first .post-content .post-content-name-id .main-name .post-content-id {
+  color: gray;
+}
+.main-container .tweet-section .posts .testpost .post-first .post-content .post-content-name-id .main-name .post-content-dot {
+  color: gray;
+}
+.main-container .tweet-section .posts .testpost .post-first .post-content .post-content-name-id .main-name .time {
+  color: gray;
+}
+.main-container .tweet-section .posts .testpost .post-first .post-content .post-content-name-id .menu-more {
+  width: 1.3vw;
+  fill: gray;
+  margin-right: 2rem;
+}
+.main-container .tweet-section .posts .testpost .post-first .post-content .tweet-content {
+  font-size: 1rem;
+}
+.main-container .tweet-section .posts .testpost .second-half {
+  display: flex;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  padding-left: 1rem;
+  justify-content: flex-end;
+  margin-right: 1.5rem;
+  margin-bottom: 1rem;
+}
+.main-container .tweet-section .posts .testpost .second-half svg {
+  fill: gray;
+  width: 2vw;
+  margin-left: 1rem;
+}
+.main-container .tweet-section .posts .testpost .second-half .first-half-icons {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+}
+.main-container .tweet-section .posts .testpost .second-half .first-half-icons .like {
+  display: flex;
+}
+.main-container .tweet-section .posts .testpost .second-half .first-half-icons .like .likes-count {
+  margin-left: 0.3rem;
+  display: none;
+}
+.main-container .tweet-section .posts .testpost .second-half .first-half-icons .like .unlike-post {
+  fill: red;
+}
+.main-container .desktop-chat-messages {
+  border-left: 1px solid gray;
+  margin-left: 3rem;
+  width: 80%;
+  height: 98vh;
+  display: flex;
+  display: none;
+}
+.main-container .desktop-chat-messages .chat-messages-people {
+  border-right: 1px solid gray;
+  width: 38%;
+  height: 98vh;
+}
+.main-container .desktop-chat-messages .chat-messages-people h3 {
+  margin-left: 1rem;
+}
+.main-container .desktop-chat-messages .chat-messages-people .chat-profiles {
+  margin-top: 1rem;
+}
+.main-container .desktop-chat-messages .chat-messages-people .chat-profiles .chat-profile-template {
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  background-color: #202327;
+  border-right: 0.6vh solid #1d9bf0;
+}
+.main-container .desktop-chat-messages .chat-messages-people .chat-profiles .chat-profile-template .chat-profile-item {
+  margin-left: 0.3rem;
+  background-color: #202327;
+}
+.main-container .desktop-chat-messages .chat-messages-people .chat-profiles .chat-profile-template .chat-profile-image {
+  background-image: url("images/photo.png");
+  height: 4vh;
+  width: 4vh;
+  background-size: cover;
+  border-radius: 2vh;
+}
+.main-container .desktop-chat-messages .chat-messages-people .chat-profiles .chat-profile-template .chat-profile-id {
+  color: gray;
+}
+.main-container .desktop-chat-messages .chat-messages-people .chat-profiles .chat-profile-template-2 {
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+}
+.main-container .desktop-chat-messages .chat-messages-people .chat-profiles .chat-profile-template-2 .chat-profile-item-2 {
+  margin-left: 0.3rem;
+}
+.main-container .desktop-chat-messages .chat-messages-people .chat-profiles .chat-profile-template-2 .chat-profile-image-2 {
+  background-image: url("images/photo.png");
+  height: 4vh;
+  width: 4vh;
+  background-size: cover;
+  border-radius: 2vh;
+}
+.main-container .desktop-chat-messages .chat-messages-people .chat-profiles .chat-profile-template-2 .chat-profile-id-2 {
+  color: gray;
+}
+.main-container .desktop-chat-messages .desktop-chat-window {
+  width: 58%;
+  height: 95vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.main-container .desktop-chat-messages .desktop-chat-window h3 {
+  margin-left: 1rem;
+}
+.main-container .desktop-chat-messages .desktop-chat-window .chat-messages-container::-webkit-scrollbar {
+  display: none;
+}
+.main-container .desktop-chat-messages .desktop-chat-window .chat-messages-container {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  height: 75vh;
+  overflow: scroll;
+}
+.main-container .desktop-chat-messages .desktop-chat-window .chat-messages-container .sender-message {
+  padding: 1rem;
+  background-color: #2F3336;
+  align-self: flex-start;
+  border-radius: 20px 20px 20px 0;
+  margin-top: 1rem;
+}
+.main-container .desktop-chat-messages .desktop-chat-window .chat-messages-container .reciever-message {
+  background-color: #1D9BF0;
+  align-self: flex-end;
+  padding: 1rem;
+  border-radius: 20px 20px 0 20px;
+  margin-top: 1rem;
+}
+.main-container .desktop-chat-messages .desktop-chat-window .chat-messages-container .time {
+  color: gray;
+  font-size: 0.8rem;
+}
+.main-container .desktop-chat-messages .desktop-chat-window .chat-window-send {
+  margin: 1rem;
+  position: absolute;
+  bottom: 0;
+  width: 95%;
+  height: 10vh;
+  background-color: #202327;
+  border-radius: 2rem;
+}
+.main-container .desktop-chat-messages .desktop-chat-window .chat-window-send #chat-window-input {
+  position: absolute;
+  top: 1rem;
+  padding: 1rem;
+  font-size: 1.2rem;
+  width: 80%;
+  border: none;
+  background-color: #202327;
+  border-radius: 2rem;
+}
+.main-container .desktop-chat-messages .desktop-chat-window .chat-window-send #chat-window-input:focus {
+  outline: none;
+}
+.main-container .desktop-chat-messages .desktop-chat-window .chat-window-send #chat-send-button {
+  right: 0;
+  top: 1rem;
+  position: absolute;
+  width: 15%;
+  border: none;
+  background-color: #202327;
+  border-radius: 2rem;
+}
+.main-container .desktop-chat-messages .desktop-chat-window .chat-window-send #chat-send-button .chat-window-send-button {
+  padding: 1rem;
+  fill: #1d9bf0;
+  width: 3.5vh;
+  height: 3.5vh;
+  background-color: #202327;
+  border-radius: 2rem;
+}
+@media screen and (max-width: 794px) {
+  .main-container .navigation-section {
+    width: 10vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main-container .navigation-section .icon-content {
+    display: none;
+  }
+  .main-container .navigation-section .nav-icons {
+    width: 3vh;
+  }
+  .main-container .navigation-section .post {
+    margin-left: 1rem;
+  }
+  .main-container .navigation-section .nav-profile-section {
+    width: 10vw;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+  }
+  .main-container .navigation-section .nav-profile-section .photo-name {
+    display: flex;
+    justify-content: center;
+  }
+  .main-container .navigation-section .nav-profile-section .photo-name .name {
+    display: none;
+  }
+  .main-container .navigation-section .nav-profile-section .photo-name .photo-container .photo {
+    height: 5vh;
+    width: 5vh;
+    background-image: url("profile pic.png");
+    background-size: cover;
+    border-radius: 2rem;
+  }
+  .main-container .navigation-section .nav-profile-section .menu-more {
+    display: none;
+  }
+  .main-container .tweet-section .header .setting {
+    width: 3vh;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .main-container .navigation-section {
+    width: 15vw;
+    margin-top: 1rem;
+    margin-left: 15rem;
+  }
+  .main-container .navigation-section .nav-icons {
+    width: 1.8vw;
+  }
+  .main-container .navigation-section .nav-profile-section {
+    width: 15vw;
+  }
+  .main-container .navigation-section .nav-profile-section .photo-name .photo-container .photo {
+    height: 3.5vw;
+    width: 3.5vw;
+  }
+  .main-container .navigation-section .nav-profile-section .photo-name .name {
+    font-size: 1rem;
+  }
+  .main-container .tweet-section {
+    width: 50%;
+  }
+  .main-container .tweet-section .tweet-first .profile .tweet-profile-image {
+    height: 3.5vw;
+    width: 3.5vw;
+  }
+  .main-container .tweet-section .tweet-second .icons .tweet-icons {
+    width: 1.5vw;
+  }
+  .main-container .tweet-section .tweet-second .btn-container .tweet-btn {
+    font-size: 1rem;
+  }
+  .main-container .tweet-section .posts {
+    width: 100%;
+  }
+  .main-container .tweet-section .posts .testpost .post-first .post-test-profile .post-test-profile-image {
+    height: 3.5vw;
+    width: 3.5vw;
+  }
+  .main-container .tweet-section .posts .testpost .second-half svg {
+    width: 1.5vw;
+  }
+}
+
+@media screen and (max-width: 496px) {
+  .desktop-view {
+    display: none;
+  }
+  .mobile-view {
+    display: block;
+  }
+  .mobile-view .personal-message-container {
+    display: none;
+    height: 90vh;
+    position: relative;
+  }
+  .mobile-view .personal-message-container .personal-messages {
+    padding: 1rem;
+    height: 70vh;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+  }
+  .mobile-view .personal-message-container .personal-messages .sender-message-mobile {
+    padding: 1rem;
+    background-color: #2F3336;
+    align-self: flex-start;
+    border-radius: 20px 20px 20px 0;
+    margin-top: 1rem;
+  }
+  .mobile-view .personal-message-container .personal-messages .reciever-message-mobile {
+    background-color: #1D9BF0;
+    align-self: flex-end;
+    padding: 1rem;
+    border-radius: 20px 20px 0 20px;
+    margin-top: 1rem;
+  }
+  .mobile-view .personal-message-container .personal-messages .time-mobile {
+    color: gray;
+    font-size: 0.8rem;
+  }
+  .mobile-view .personal-message-container .personal-messages::-webkit-scrollbar {
+    display: none;
+  }
+  .mobile-view .personal-message-container .personal-message-heading-section {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+  }
+  .mobile-view .personal-message-container .personal-message-heading-section .back-button-personal-chat .mobile-message-back-button {
+    height: 3vh;
+    width: 3vh;
+    fill: white;
+  }
+  .mobile-view .personal-message-container .personal-message-heading-section .personal-chat-acct-name {
+    margin-left: 1rem;
+  }
+  .mobile-view .personal-message-container .mobile-personal-chat-send-container {
+    position: absolute;
+    bottom: 0;
+  }
+  .mobile-view .personal-message-container .mobile-personal-chat-send-container .mobile-chat-window-input-send {
+    display: flex;
+    padding: 1rem;
+  }
+  .mobile-view .personal-message-container .mobile-personal-chat-send-container .mobile-chat-window-input-send #mobile-chat-window-input {
+    font-size: 1rem;
+    border: none;
+  }
+  .mobile-view .personal-message-container .mobile-personal-chat-send-container .mobile-chat-window-input-send #mobile-chat-window-input:focus {
+    outline: none;
+  }
+  .mobile-view .personal-message-container .mobile-personal-chat-send-container .mobile-chat-window-input-send #mobile-chat-send-button {
+    border: none;
+  }
+  .mobile-view .personal-message-container .mobile-personal-chat-send-container .mobile-chat-window-input-send #mobile-chat-send-button .mobile-chat-window-send-button {
+    fill: #1D9BF0;
+    width: 4vh;
+  }
+  .mobile-view .mobile-chat-app {
+    display: none;
+  }
+  .mobile-view .mobile-chat-app .mobile-chat-main-profile-container {
+    padding: 1rem;
+    display: flex;
+    font-size: 1.2rem;
+    align-items: center;
+    margin-bottom: 1.2rem;
+  }
+  .mobile-view .mobile-chat-app .mobile-chat-main-profile-container .mobile-chat-profile-image {
+    background-image: url("profile pic.png");
+    height: 5vh;
+    width: 5vh;
+    background-size: cover;
+    margin-right: 1rem;
+    border-radius: 2rem;
+  }
+  .mobile-view .mobile-chat-app .mobile-messages-profile-people .mobile-chat-profiles {
+    margin-top: 1rem;
+  }
+  .mobile-view .mobile-chat-app .mobile-messages-profile-people .mobile-chat-profiles .mobile-chat-profile-template {
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    border: 1px solid white;
+  }
+  .mobile-view .mobile-chat-app .mobile-messages-profile-people .mobile-chat-profiles .mobile-chat-profile-template .mobile-chat-profile-item {
+    margin-left: 0.3rem;
+  }
+  .mobile-view .mobile-chat-app .mobile-messages-profile-people .mobile-chat-profiles .mobile-chat-profile-template .mobile-chat-profile-image {
+    background-image: url("images/photo.png");
+    height: 4vh;
+    width: 4vh;
+    background-size: cover;
+    border-radius: 2vh;
+  }
+  .mobile-view .mobile-chat-app .mobile-messages-profile-people .mobile-chat-profiles .mobile-chat-profile-template .mobile-chat-profile-id {
+    color: gray;
+  }
+  .mobile-view .mobile-nav {
+    margin: 1rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  .mobile-view .mobile-nav .mobile-nav-profile .mobile-profile-image {
+    height: 4vh;
+    width: 4vh;
+    background-image: url("profile pic.png");
+    background-size: cover;
+    border-radius: 2rem;
+    margin-right: 0.6rem;
+  }
+  .mobile-view .mobile-nav .mobile-nav-profile .navigation-section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 1rem;
+    height: 100%;
+    z-index: 1;
+    display: none;
+  }
+  .mobile-view .mobile-nav .mobile-nav-profile .navigation-section .nav-profile-part {
+    width: 50vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .mobile-view .mobile-nav .mobile-nav-profile .navigation-section .nav-profile-part .nav-profile-part-image {
+    height: 5vh;
+    width: 5vh;
+    background-image: url("profile pic.png");
+    background-size: cover;
+    border-radius: 2rem;
+    margin-right: 0.6rem;
+  }
+  .mobile-view .mobile-nav .mobile-nav-profile .navigation-section .nav-profile-part .plus-icon {
+    border: 1px solid gray;
+    height: 2vh;
+    border-radius: 2rem;
+    padding: 0.4rem;
+  }
+  .mobile-view .mobile-nav .mobile-nav-profile .navigation-section .nav-profile-part .plus-icon .plus-icon-svg {
+    fill: white;
+    width: 2vh;
+  }
+  .mobile-view .mobile-nav .mobile-nav-profile .navigation-section .nav-profile-part-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 0.5rem;
+  }
+  .mobile-view .mobile-nav .mobile-nav-profile .navigation-section .nav-profile-part-id {
+    color: gray;
+  }
+  .mobile-view .mobile-nav .mobile-nav-profile .navigation-section .following-followers {
+    display: flex;
+    margin-top: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  .mobile-view .mobile-nav .mobile-nav-profile .navigation-section .following-followers .following {
+    display: flex;
+    margin-right: 2rem;
+  }
+  .mobile-view .mobile-nav .mobile-nav-profile .navigation-section .following-followers .following .following-count {
+    margin-right: 0.3rem;
+  }
+  .mobile-view .mobile-nav .mobile-nav-profile .navigation-section .following-followers .following .following-text {
+    color: gray;
+  }
+  .mobile-view .mobile-nav .mobile-nav-profile .navigation-section .following-followers .followers {
+    display: flex;
+    margin-right: 1.5rem;
+  }
+  .mobile-view .mobile-nav .mobile-nav-profile .navigation-section .following-followers .followers .followers-count {
+    margin-right: 0.3rem;
+  }
+  .mobile-view .mobile-nav .mobile-nav-profile .navigation-section .following-followers .followers .followers-text {
+    color: gray;
+  }
+  .mobile-view .mobile-nav .mobile-nav-profile .navigation-section .mobile-navbar-options .mobile-navbar-icons {
+    fill: white;
+    width: 3vh;
+    margin-right: 1rem;
+  }
+  .mobile-view .mobile-nav .mobile-nav-profile .navigation-section .mobile-navbar-options .mobile-navbar-option {
+    display: flex;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  .mobile-view .mobile-nav .mobile-nav-x-logo .mobile-nav-x-icon {
+    fill: white;
+    width: 4vh;
+  }
+  .mobile-view .mobile-nav .mobile-nav-setting .mobile-nav-setting-icon {
+    fill: white;
+    width: 4vh;
+  }
+  .mobile-view .mobile-foryou-following-section {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.2rem;
+    border-bottom: 1px solid gray;
+  }
+  .mobile-view .mobile-foryou-following-section .mobile-for-you-container {
+    border-bottom: 5px solid #1d9bf0;
+  }
+  .mobile-view .mobile-foryou-following-section .mobile-for-you-container .mobile-for-you {
+    padding: 1rem;
+  }
+  .mobile-view .mobile-foryou-following-section .mobile-following-container .mobile-following {
+    padding: 1rem;
+  }
+  .mobile-view .mobile-bottom-container {
+    position: fixed;
+    bottom: 0vh;
+    padding: 0.5rem;
+    width: 100%;
+  }
+  .mobile-view .mobile-bottom-container .mobile-write-tweet {
+    position: fixed;
+    right: 4vh;
+    bottom: 7vh;
+    padding: 0.8rem;
+    border-radius: 3rem;
+    width: 4vh;
+    height: 4vh;
+    text-align: center;
+    background-color: #1d9bf0;
+  }
+  .mobile-view .mobile-bottom-container .mobile-write-tweet .write-tweet-icon {
+    fill: white;
+    width: 3vh;
+    background-color: #1d9bf0;
+  }
+  .mobile-view .mobile-bottom-container .mobile-bottom-icons-div {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .mobile-view .mobile-bottom-container .mobile-bottom-icons-div .mobile-bottom-icons {
+    fill: white;
+    width: 3vh;
+  }
+  .mobile-view .tweet-box {
+    position: fixed;
+    top: 0;
+    padding: 1rem;
+    width: 92%;
+    height: 100%;
+    display: none;
+  }
+  .mobile-view .tweet-box .tweet-box-header {
+    display: flex;
+    justify-content: space-between;
+  }
+  .mobile-view .tweet-box .tweet-box-header .back-button .back-button-icon {
+    width: 3vh;
+    fill: white;
+  }
+  .mobile-view .tweet-box .tweet-box-header .drafts-posts {
+    display: flex;
+    font-size: 1rem;
+    align-items: center;
+  }
+  .mobile-view .tweet-box .tweet-box-header .drafts-posts .drafts {
+    margin-right: 2rem;
+    color: #1d9bf0;
+    font-weight: bold;
+  }
+  .mobile-view .tweet-box .tweet-box-header .drafts-posts .post {
+    background-color: #1d9bf0;
+    padding: 0.5rem;
+    border-radius: 2rem;
+    width: 6vh;
+    text-align: center;
+    font-weight: bold;
+    border: none;
+  }
+  .mobile-view .tweet-box .tweet-content-container {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  .mobile-view .tweet-box .tweet-content-container .profile .tweet-profile-image {
+    height: 5vh;
+    width: 5vh;
+    background-image: url("profile pic.png");
+    background-size: cover;
+    border-radius: 2rem;
+    margin-right: 0.8rem;
+  }
+  .mobile-view .tweet-box .tweet-content-container .input-container .post-input {
+    font-size: 1rem;
+    border: none;
+    color: white;
+    padding: 0.5rem;
+  }
+  .mobile-view .tweet-box .everyone-can-reply {
+    display: flex;
+    margin-top: 4rem;
+    margin-left: 0.6rem;
+  }
+  .mobile-view .tweet-box .everyone-can-reply .everyone-can-reply-icon {
+    width: 2vh;
+    fill: #1d9bf0;
+  }
+  .mobile-view .tweet-box .everyone-can-reply .everyone-can-reply-content {
+    margin-left: 0.3rem;
+    color: #1d9bf0;
+    font-weight: bold;
+  }
+  .mobile-view .tweet-box .mobile-tweet-box-icons {
+    display: flex;
+    margin-top: 1rem;
+    margin-left: 1rem;
+  }
+  .mobile-view .tweet-box .mobile-tweet-box-icons .mobile-tweet-box-icon {
+    fill: #1d9bf0;
+    width: 2vh;
+    margin-right: 1rem;
+  }
+  .mobile-view .posts-mobile-view::-webkit-scrollbar {
+    display: none;
+  }
+  .mobile-view .posts-mobile-view {
+    height: 80vh;
+    overflow: scroll;
+  }
+  .mobile-view .posts-mobile-view .mobile-post-template {
+    padding: 1rem;
+  }
+  .mobile-view .posts-mobile-view .mobile-post-template .mobile-post-first-half {
+    display: flex;
+    align-items: center;
+  }
+  .mobile-view .posts-mobile-view .mobile-post-template .mobile-post-first-half .mobile-post-profile .mobile-post-image {
+    height: 5vh;
+    width: 5vh;
+    background-image: url("profile pic.png");
+    background-size: cover;
+    border-radius: 2rem;
+    margin-right: 0.6rem;
+  }
+  .mobile-view .posts-mobile-view .mobile-post-template .mobile-post-first-half .mobile-post-content {
+    width: 100%;
+  }
+  .mobile-view .posts-mobile-view .mobile-post-template .mobile-post-first-half .mobile-post-content .mobile-post-name-id {
+    display: flex;
+    justify-content: space-between;
+  }
+  .mobile-view .posts-mobile-view .mobile-post-template .mobile-post-first-half .mobile-post-content .mobile-post-name-id .mobile-post-main-name {
+    display: flex;
+  }
+  .mobile-view .posts-mobile-view .mobile-post-template .mobile-post-first-half .mobile-post-content .mobile-post-name-id .mobile-post-main-name .id-time {
+    color: gray;
+    margin-left: 0.2rem;
+  }
+  .mobile-view .posts-mobile-view .mobile-post-template .mobile-post-first-half .mobile-post-content .mobile-post-name-id .mobile-post-menu-more .mobile-post-nav-icons {
+    width: 2.2vh;
+    fill: gray;
+  }
+  .mobile-view .posts-mobile-view .mobile-post-template .mobile-post-comment-icons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+  }
+  .mobile-view .posts-mobile-view .mobile-post-template .mobile-post-comment-icons .mobile-post-icon {
+    width: 2.5vh;
+    fill: gray;
+  }
+  .mobile-view .posts-mobile-view .mobile-post-template .mobile-post-comment-icons .mobile-icons-first-half {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .mobile-view .posts-mobile-view .mobile-post-template .mobile-post-comment-icons .mobile-icons-first-half .mobile-like {
+    display: flex;
+    align-items: center;
+  }
+  .mobile-view .posts-mobile-view .mobile-post-template .mobile-post-comment-icons .mobile-icons-first-half .mobile-like .likes-count-mobile {
+    margin-left: 0.5rem;
+  }
+  .mobile-view .posts-mobile-view .mobile-post-template .mobile-post-comment-icons .mobile-icons-first-half .mobile-like .likes-count {
+    display: none;
+  }
+  .mobile-view .posts-mobile-view .mobile-post-template .mobile-post-comment-icons .mobile-icons-first-half .mobile-like .unlike-post {
+    fill: red;
+  }
+}/*# sourceMappingURL=style.css.map */
