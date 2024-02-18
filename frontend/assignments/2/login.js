@@ -5,7 +5,11 @@ let loginButton = document.querySelector("#login-button");
 
 
 let currentUser;
-loginButton?.addEventListener("click", async (e) => {
+loginButton?.addEventListener("click", (e) => {
+  loginFunction();
+});
+
+async function loginFunction(){
   let username = inputUsername.value;
   let pass = loginPassword.value;
 
@@ -41,5 +45,5 @@ loginButton?.addEventListener("click", async (e) => {
     window.location.href = `Home.html?username=${currentUser.user_email_id}`;
   }
   console.log(jsonres);
-});
+}
 
