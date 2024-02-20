@@ -1,0 +1,21 @@
+.item{
+    display: flex;
+    width: 98%;
+    padding: 1rem;
+    border: 1px solid #e8e8e8;
+    justify-content: space-between;
+    .item-content{
+        font-size: 16px;
+        padding: 0.5rem;
+
+    }
+
+    #delete-btn{
+        font-size: 16px;
+        background-color: #dc3545;
+        color: white;
+        border: none;
+        padding: 0.5rem;
+
+    }
+}
