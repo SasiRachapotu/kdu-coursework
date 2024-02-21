@@ -1,0 +1,53 @@
+.quote{
+    background-color: #0C359E;
+    color: #F6F5F5;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    .quote-header{
+        text-align: center;
+        font-size: 32px;
+        font-weight: 600;
+        padding: 1.5rem;
+    }
+
+    .author-date{
+        align-self: flex-end;
+        display: flex;
+        flex-direction: column;
+        margin-right: 2rem;
+        .quote-author{
+            font-size: 24px;
+            font-weight: 600;
+            color: #d5d5d5;
+    
+        }
+    
+        .quote-date-added{
+            font-size: 20px;
+            align-self: flex-end;
+            color: #d5d5d5;
+            margin-top: 0.5rem;
+        }
+    }
+
+    .tags-container{
+        display: flex;
+        align-self: flex-start;
+        margin-top: 1rem;
+        .tag{
+            background-color: #EE99C2;
+            color: black;
+            padding: 1rem;
+            font-size: 24px;
+            font-weight: 600;
+            border-radius: 2rem;
+            margin-right: 1rem;
+            border: none;
+        }
+    }
+}

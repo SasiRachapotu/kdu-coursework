@@ -1,0 +1,18 @@
+.filters-container{
+     margin-top: 1rem;
+     width: 100%;
+     
+    .filter-header{
+        margin-bottom: 0.5rem;
+        font-size: 32px;
+        font-weight: 600;
+    }
+
+    .filters{
+        margin-top: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 1rem;
+        font-size: 24px;
+    }
+}

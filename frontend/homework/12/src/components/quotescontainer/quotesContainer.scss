@@ -1,0 +1,26 @@
+.main-container{
+    width: 100%;
+
+    .second-container{
+        width: 60%;
+        margin: auto;
+        padding: 1rem;
+
+        #new-quote{
+            background-color: #FFE3CA;
+            color: #0C359E;
+            font-size: 32px;
+            font-weight: 600;
+            padding: 2rem;
+            border-radius: 5px;
+            border: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .quote-container{
+            margin-top: 2rem;
+        }
+    }
+}
