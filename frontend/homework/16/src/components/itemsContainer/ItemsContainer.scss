@@ -43,6 +43,19 @@
                 margin-top: 1rem;
             }
         }
+
+        #remove-checked{
+            margin-top: 1rem;
+            font-size: 16px;
+            background-color: #dc3545;
+            color: white;
+            border-radius: 10px;
+            border: none;
+            padding: 0.5rem;
+        }
+        #remove-checked:hover{
+            cursor: pointer;
+        }
     
     }
 }

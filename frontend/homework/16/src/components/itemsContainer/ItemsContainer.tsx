@@ -4,7 +4,9 @@ import "./ItemsContainer.scss";
 import Item from "../item/Item";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../redux/store";
-import { changeItems } from "../../redux/ItemsSlice";
+import { addItem, removeCheckedItems} from "../../redux/ItemsSlice";
+
+import {v4 as uuidv4} from "uuid";
 
 
 export function ItemsContainer() {
@@ -22,7 +24,7 @@ export function ItemsContainer() {
   }
 
   function submitHandler() {
-    itemsDispatch(changeItems([...itemsValueReducer,{ id: itemsValueReducer.length + 1, text: inpValue }]))
+    itemsDispatch(addItem({ id: uuidv4(), text: inpValue ,checked:false}));
     console.log(inpValue);
     setInpValue("");
   }
@@ -64,6 +66,10 @@ export function ItemsContainer() {
       ));
     }
   }
+
+  const removeCheckedItemsHandler =()=>{
+    itemsDispatch(removeCheckedItems())
+  }
   return (
     <div className="items-main-container">
       <div className="items-container">
@@ -87,6 +93,8 @@ export function ItemsContainer() {
           <h2 className="sub-items-heading">Items</h2>
           <div className="all-items">{renderItems()}</div>
         </div>
+
+        <button id="remove-checked" onClick={removeCheckedItemsHandler}>Remove checked items</button>
       </div>
     </div>
   );

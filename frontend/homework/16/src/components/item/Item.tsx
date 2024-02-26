@@ -1,11 +1,11 @@
 import "./item.scss";
-import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../../redux/store";
-import { changeItems } from "../../redux/ItemsSlice";
+import { useDispatch } from "react-redux";
+import { removeItem, toggleChecked } from "../../redux/ItemsSlice";
 
 interface IItem {
-  id: number;
+  id: string;
   text: string;
+  checked:boolean
 }
 
 interface IItemProps{
@@ -14,26 +14,23 @@ interface IItemProps{
 
 function Item({listItem}:IItemProps) {
 
-  const itemsValueReducer = useSelector(
-    (state: RootState) => state.items.items
-  );
-
   const itemsDispatch = useDispatch();
   function deleteHandler() {
-    itemsDispatch(
-      changeItems(
-        itemsValueReducer.filter(
-          (item) => item.id !== listItem.id
-        )
-      )
-    );
+    itemsDispatch(removeItem(listItem.id))
+  }
+
+  function checkHandler(){
+    itemsDispatch(toggleChecked(listItem.id));
   }
   return (
-    <div className="item">
-      <div className="item-content">{listItem.text}</div>
+    <div className={`item ${listItem.checked===true?"item-strike" : ""}`}>
+      <div className={`item-content ${listItem.checked===true?"item-content-strike" : ""}`}>{listItem.text}</div>
+      <div className="delete-check-box">
+        <input type="checkbox" id="checkbox" onChange={checkHandler}></input>
       <button id="delete-btn" onClick={deleteHandler}>
         X
       </button>
+      </div>
     </div>
   );
 }
