@@ -23,7 +23,7 @@ describe("Items Container", () => {
       </Provider>
     );
 
-    const inputElement = screen.getByTestId("items-input") as HTMLInputElement;
+    const inputElement = screen.getByTestId<HTMLInputElement>("items-input");
 
     // Simulate user input
     fireEvent.input(inputElement, { target: { value: "Test Value" } });
@@ -51,7 +51,7 @@ describe("Items Container", () => {
       </Provider>
     );
 
-    const inputElement = screen.getByTestId("items-input") as HTMLInputElement;
+    const inputElement = screen.getByTestId<HTMLInputElement>("items-input");
     const submitButton = screen.getByTestId("submit-btn");
 
     // Simulate user input
