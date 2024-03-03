@@ -1,0 +1,44 @@
+.items-main-container{
+    width: 100%;
+
+    .items-container{
+        width: 75%;
+        margin: auto;
+        border: 2px solid #e8e8e8;
+        margin-top: 1rem;
+        padding: 1rem;
+
+        .items-header{
+            .items-header-item{
+                margin: 0;
+                font-size: 32px;
+            }
+
+            .items-input-container{
+                font-size: 16px;
+                margin-top: 0.5rem;
+                #items-input{
+                    padding: 0.3rem;
+                    font-size: 16px;
+                }
+                #submit-btn{
+                    margin-left: 0.5rem;
+                    padding: 0.3rem;
+                    font-size: 16px;
+                    color: white;
+                    background-color: #343a40;
+                    border-radius: 5px;
+                }
+            }
+
+        }
+
+        .sub-items-header{
+            .sub-items-heading{
+                font-size: 32px;
+            }
+        }
+    
+    }
+}
+
