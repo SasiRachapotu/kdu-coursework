@@ -80,7 +80,6 @@ const getPortfolioSlice = createSlice({
             state.statusList=[];
             state.dateFilter=false;
         }
-
     },
     extraReducers:(builder)=>{
         builder.addCase(getTransactions.fulfilled,(state,action)=>{

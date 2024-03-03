@@ -13,6 +13,8 @@ import {
   downArrowStyles,
   eachStockStyle,
   enterQtyInputStyles,
+  gridBoxStyles,
+  gridStyles,
   inputQuantityStyles,
   leftContainerStyle,
   linkDropStyles,
@@ -287,15 +289,78 @@ export function CandleStickContainer() {
           </div>
         </div>
         <div className="candle-sticks-container" style={candleStickStyles}>
+          <div className="grid" style={gridStyles}>
+            <div className="grid-box" style={gridBoxStyles}></div>
+            <div className="grid-box" style={gridBoxStyles}></div>
+            <div className="grid-box" style={gridBoxStyles}></div>
+            <div className="grid-box" style={gridBoxStyles}></div>
+            <div className="grid-box" style={gridBoxStyles}></div>
+            <div className="grid-box" style={gridBoxStyles}></div>
+            <div className="grid-box" style={gridBoxStyles}></div>
+            <div className="grid-box" style={gridBoxStyles}></div>
+            <div className="grid-box" style={gridBoxStyles}></div>
+            <div className="grid-box" style={gridBoxStyles}></div>
+            <div className="grid-box" style={gridBoxStyles}></div>
+            <div className="grid-box" style={gridBoxStyles}></div>
+            <div className="grid-box" style={gridBoxStyles}></div>
+            <div className="grid-box" style={gridBoxStyles}></div>
+            <div className="grid-box" style={gridBoxStyles}></div>
+            <div className="grid-box" style={gridBoxStyles}></div>
+            <div className="grid-box" style={gridBoxStyles}></div>
+            <div className="grid-box" style={gridBoxStyles}></div>
+            <div className="grid-box" style={gridBoxStyles}></div>
+            <div className="grid-box" style={gridBoxStyles}></div>
+            <div className="grid-box" style={gridBoxStyles}></div>
+            <div className="grid-box" style={gridBoxStyles}></div>
+            <div className="grid-box" style={gridBoxStyles}></div>
+            <div className="grid-box" style={gridBoxStyles}></div>
+            <div className="grid-box" style={gridBoxStyles}></div>
+            <div className="grid-box" style={gridBoxStyles}></div>
+            <div className="grid-box" style={gridBoxStyles}></div>
+            <div className="grid-box" style={gridBoxStyles}></div>
+            <div className="grid-box" style={gridBoxStyles}></div>
+            <div className="grid-box" style={gridBoxStyles}></div>
+            <div className="grid-box" style={gridBoxStyles}></div>
+            <div className="grid-box" style={gridBoxStyles}></div>
+            <div className="grid-box" style={gridBoxStyles}></div>
+            <div className="grid-box" style={gridBoxStyles}></div>
+            <div className="grid-box" style={gridBoxStyles}></div>
+            <div className="grid-box" style={gridBoxStyles}></div>
+            <div className="grid-box" style={gridBoxStyles}></div>
+            <div className="grid-box" style={gridBoxStyles}></div>
+            <div className="grid-box" style={gridBoxStyles}></div>
+            <div className="grid-box" style={gridBoxStyles}></div>
+            <div className="grid-box" style={gridBoxStyles}></div>
+            <div className="grid-box" style={gridBoxStyles}></div>
+            <div className="grid-box" style={gridBoxStyles}></div>
+            <div className="grid-box" style={gridBoxStyles}></div>
+            <div className="grid-box" style={gridBoxStyles}></div>
+            <div className="grid-box" style={gridBoxStyles}></div>
+            <div className="grid-box" style={gridBoxStyles}></div>
+            <div className="grid-box" style={gridBoxStyles}></div>
+            <div className="grid-box" style={gridBoxStyles}></div>
+            <div className="grid-box" style={gridBoxStyles}></div>
+            <div className="grid-box" style={gridBoxStyles}></div>
+            <div className="grid-box" style={gridBoxStyles}></div>
+            <div className="grid-box" style={gridBoxStyles}></div>
+            <div className="grid-box" style={gridBoxStyles}></div>
+            <div className="grid-box" style={gridBoxStyles}></div>
+            <div className="grid-box" style={gridBoxStyles}></div>
+            <div className="grid-box" style={gridBoxStyles}></div>
+            <div className="grid-box" style={gridBoxStyles}></div>
+            <div className="grid-box" style={gridBoxStyles}></div>
+            <div className="grid-box" style={gridBoxStyles}></div>
+          </div>
         {bars.map((bar) => (
           <div
             key={bar.id}
             style={{
               backgroundColor: `${bar.color}`,
               height: `${bar.value}px`,
-              width: '20px',
+              width: '22.7px',
               border:`2px solid ${bar.borderColor}`,
-              margin:"0.5px"
+              margin:"0.5px",
+              boxSizing:"border-box"
             }}
           ></div>
         ))}

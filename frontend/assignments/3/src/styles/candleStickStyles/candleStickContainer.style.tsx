@@ -131,8 +131,25 @@ export const candleStickStyles:CSSProperties={
     margin:"1rem",
     marginLeft:"2rem",
     display:"flex",
-    alignItems:"flex-end"
+    alignItems:"flex-end",
+    position:"relative",
 }
+
+export const gridStyles: CSSProperties = {
+    width: "100%",
+    height: "100%",
+    position: "absolute",
+    display: "grid",
+    gridTemplateColumns: "repeat(10, 1fr)",
+    gridTemplateRows: "repeat(5, 1fr)",
+    gap: "1px", // Adjust the gap between grid items
+    zIndex:"-1"
+  };
+
+ export const gridBoxStyles: CSSProperties = {
+    border: "1px solid gray",
+    boxSizing: "border-box", // Include padding and border in the box model
+  };
 
 export const personalHistoryStyles:CSSProperties={
     // margin:"1rem",
