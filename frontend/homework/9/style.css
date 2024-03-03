@@ -1,0 +1,117 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.main-container {
+  padding: 1rem;
+}
+.main-container .heading {
+  font-size: 3rem;
+  padding: 1rem;
+  text-align: center;
+  border: 2px solid black;
+}
+.main-container .search-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+.main-container .search-container #search-bar {
+  width: 80%;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+.main-container .search-container #search {
+  width: 10%;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+.main-container .items-container {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+.main-container .items-container .item-div {
+  position: relative;
+  border: 2px solid black;
+  padding: 1rem;
+  border-radius: 2rem;
+  margin: 3rem;
+  width: 25%;
+  margin-bottom: 2rem;
+}
+.main-container .items-container .item-div .rating {
+  background-color: red;
+  padding: 1rem;
+  border-radius: 3rem;
+  position: absolute;
+  right: -2vh;
+  top: -2vh;
+  font-size: 1.5rem;
+}
+.main-container .items-container .item-div .image-container {
+  text-align: center;
+}
+.main-container .items-container .item-div .image-container img {
+  width: 100%;
+  height: 45%;
+}
+.main-container .items-container .item-div .food-item-name {
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 0.2rem;
+  border: 2px solid black;
+  margin: 0.5rem;
+}
+.main-container .items-container .item-div .ingredients {
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 0.2rem;
+  border: 2px solid black;
+  margin: 0.5rem;
+}
+.main-container .items-container .item-div .cuisine-difficulty {
+  display: flex;
+  font-size: 1.5rem;
+  margin: 0.5rem;
+  justify-content: space-between;
+}
+.main-container .items-container .item-div .cuisine-difficulty .cuisine {
+  width: 45%;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 0.2rem;
+  border: 2px solid black;
+  margin-right: 0.5rem;
+}
+.main-container .items-container .item-div .cuisine-difficulty .difficulty {
+  width: 45%;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 0.2rem;
+  border: 2px solid black;
+}
+.main-container .items-container .item-div .time-taken-x-calories {
+  display: flex;
+  font-size: 1.5rem;
+  margin: 0.5rem;
+  justify-content: space-between;
+}
+.main-container .items-container .item-div .time-taken-x-calories .time-taken {
+  width: 45%;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 0.2rem;
+  border: 2px solid black;
+  margin-right: 0.5rem;
+}
+.main-container .items-container .item-div .time-taken-x-calories .calories {
+  width: 45%;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 0.2rem;
+  border: 2px solid black;
+}/*# sourceMappingURL=style.css.map */
