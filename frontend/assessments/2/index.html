@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KDU Stock Market</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="header">
+        <h1>KDU Stock Market Dashboard</h1>
+    </header>
+
+    <div class="main-container">
+        <div class="first-half">
+            <div class="stock-details">
+                <div class="logo-name">
+                    <div class="logo">
+
+                    </div>
+                    <div class="name" id="stock-name">
+                        Zomato
+                    </div>
+                </div>
+                <div class="price-details">
+                    <div class="price-name">
+                        Price
+                    </div>
+                    <div class="difference">
+                        <div class="actual-value">
+                            142.32
+                        </div>
+                        <div class="arrow">
+                            &#8593
+                        </div>
+                    </div>
+                    <div class="percentage">
+                        3.00%
+                    </div>
+                </div>
+                <div class="enter-quantity">
+                    <input id="quantity" placeholder="Enter Qty">
+                    <div class="buy" id="buy-stock">Buy</div>
+                    <div class="sell" id="sell-stock">Sell</div>
+                </div>
+            </div>
+            <div class="candle-stick-box">
+            </div>
+        </div>
+
+        <div class="second-half">
+            <div class="history">
+                History
+            </div>
+            <div class="stock-history">
+                <div class="buy-stock">
+                    <div class="buy-details">
+                        <div class="buy-qty-stocks">
+                            <div class="buy-qty">100</div>
+                            <div class="stocks">stocks</div>
+                            <div class="buy-price">100$</div>
+                        </div>
+                        <div class="date">
+                            Fri 02 Feb 1996 21:04:05 GMT
+                        </div>
+                    </div>
+                    <div class="buy-name">
+                        BUY
+                    </div>
+                </div>
+
+                <div class="sell-stock">
+                    <div class="sell-details">
+                        <div class="sell-qty-stocks">
+                            <div class="sell-qty">100</div>
+                            <div class="stocks">stocks</div>
+                            <div class="sell-price">100$</div>
+                        </div>
+                        <div class="date">
+                            Fri 02 Feb 1996 21:04:05 GMT
+                        </div>
+                    </div>
+                    <div class="sell-name">
+                        SELL
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.socket.io/4.7.4/socket.io.min.js" integrity="sha384-Gr6Lu2Ajx28mzwyVR8CFkULdCU7kMlZ9UthllibdOSo6qAiN+yXNHqtgdTvFXMT4" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+</html>
