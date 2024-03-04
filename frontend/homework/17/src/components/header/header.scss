@@ -1,0 +1,37 @@
+.outer-main-div{
+    width: 100%;
+    background-color: #28a745;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.heading-container{
+    display: flex;
+    width: 75%;
+    padding: 1rem;
+    margin: auto;
+    align-items: center;
+    justify-content: space-between;
+
+    .heading{
+        width: 50%;
+        font-size: 40px;
+        color: white;
+        margin: 0;
+    }
+
+    
+    .search-bar{
+        text-align: center;
+        width: 50%;
+        #search-item{
+            width: 100%;
+            font-size: 16px;
+            padding: 0.5rem;
+            border-radius: 5px;
+            border: none;
+        }
+    }
+
+}

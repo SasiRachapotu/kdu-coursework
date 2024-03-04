@@ -1,0 +1,41 @@
+.item-strike{
+    background-color: gray;
+}
+
+.item{
+    display: flex;
+    width: 95%;
+    padding: 1rem;
+    border: 1px solid #e8e8e8;
+    margin: auto;
+    justify-content: space-between;
+    .item-content{
+        font-size: 16px;
+        padding: 0.5rem;
+    }
+
+    .item-content-strike{
+        text-decoration: line-through;
+        text-decoration-thickness: 3px;
+    }
+
+    .delete-check-box{
+        display: flex;
+        align-items: center;
+        #checkbox{
+            margin-right: 1rem;
+            width: 20px;
+            height: 20px;
+    
+        }
+    
+        #delete-btn{
+            font-size: 16px;
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 0.5rem;
+    
+        }
+    }
+}
