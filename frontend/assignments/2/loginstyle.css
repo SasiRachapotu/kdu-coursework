@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.complete-login-container {
+  margin-top: 20vh;
+  padding: 1rem;
+}
+.complete-login-container .heading {
+  display: flex;
+  font-size: 4rem;
+  align-items: center;
+  justify-content: center;
+}
+.complete-login-container .heading .loginTo {
+  margin: 1rem;
+}
+.complete-login-container .heading .twitter-logo {
+  width: 5vh;
+  fill: white;
+}
+.complete-login-container .login-container {
+  font-size: 2rem;
+}
+.complete-login-container .login-container .msg-container {
+  text-align: center;
+}
+.complete-login-container .login-container .username {
+  margin: 2rem;
+}
+.complete-login-container .login-container .username #username {
+  font-size: 2rem;
+  padding: 1rem;
+  border: 2px solid #1d9bf0;
+}
+.complete-login-container .login-container .password {
+  margin: 2rem;
+}
+.complete-login-container .login-container .password #password {
+  font-size: 2rem;
+  padding: 1rem;
+  border: 2px solid #1d9bf0;
+}
+.complete-login-container .login-container .login {
+  display: flex;
+}
+.complete-login-container .login-container .login #login-button {
+  font-size: 2rem;
+  border: none;
+  width: 100%;
+  text-align: center;
+  background-color: #1d9bf0;
+  padding: 1rem;
+  margin: 2rem;
+  border-radius: 2rem;
+}
+
+@media screen and (max-width: 560px) {
+  .complete-login-container {
+    font-size: 2rem;
+  }
+  .complete-login-container .heading {
+    font-size: 2rem;
+  }
+  .complete-login-container .heading .loginTo {
+    margin: 0.5rem;
+  }
+  .complete-login-container .heading .twitter-logo {
+    width: 3vh;
+  }
+  .complete-login-container .login-container {
+    font-size: 1.5rem;
+  }
+  .complete-login-container .login-container .username {
+    margin: 1rem;
+  }
+  .complete-login-container .login-container .username #username {
+    font-size: 1.5rem;
+  }
+  .complete-login-container .login-container .password {
+    margin: 1rem;
+  }
+  .complete-login-container .login-container .password #password {
+    font-size: 1.5rem;
+  }
+  .complete-login-container .login-container .login {
+    display: flex;
+  }
+  .complete-login-container .login-container .login #login-button {
+    font-size: 1.5rem;
+    border: none;
+    width: 100%;
+    text-align: center;
+    background-color: #1d9bf0;
+    padding: 1rem;
+    margin: 2rem;
+    border-radius: 2rem;
+  }
+}/*# sourceMappingURL=loginstyle.css.map */
