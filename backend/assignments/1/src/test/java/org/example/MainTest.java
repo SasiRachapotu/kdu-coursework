@@ -1,5 +1,7 @@
 package org.example;
 
+import details.Coins;
+import details.Transaction;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -45,11 +47,11 @@ public class MainTest {
         coins.add(coinThree);
         coins.add(coinFour);
 
-        coinNameMap.put(coinOne.getCoinName(), coinOne);
-        coinNameMap.put(coinTwo.getCoinName(), coinTwo);
+        coinNameMap.put(coinOne.getName(), coinOne);
+        coinNameMap.put(coinTwo.getName(), coinTwo);
 
-        coinCodeMap.put(coinOne.getCoinSymbol(), coinOne);
-        coinCodeMap.put(coinTwo.getCoinSymbol(), coinTwo);
+        coinCodeMap.put(coinOne.getSymbol(), coinOne);
+        coinCodeMap.put(coinTwo.getSymbol(), coinTwo);
     }
 
     /**
@@ -127,6 +129,8 @@ public class MainTest {
         } catch (IOException e) {
             // TODO Auto-generated catch block
             fail();
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
         }
 
 
@@ -162,7 +166,7 @@ public class MainTest {
 
             new Main();
             Main.executeTransactions(transactionArray, latch);
-        } catch (IOException e) {
+        } catch (IOException | InterruptedException e) {
             // TODO Auto-generated catch block
             fail();
         }
@@ -199,7 +203,7 @@ public class MainTest {
             transactionArray = Main.parseJsonFile("src/test/resources/test_transaction_3.json");
 
             Main.executeTransactions(transactionArray, latch);
-        } catch (IOException e) {
+        } catch (IOException | InterruptedException e) {
             fail();
         }
 
@@ -235,7 +239,7 @@ public class MainTest {
             transactionArray = Main.parseJsonFile("src/test/resources/test_transaction_4.json");
 
             Main.executeTransactions(transactionArray, latch);
-        } catch (IOException e) {
+        } catch (IOException | InterruptedException e) {
             fail();
         }
 
@@ -257,7 +261,7 @@ public class MainTest {
     @Test
     void testExecuteTransactionImplementsRunnable() {
         // Create an instance of ExecuteTransaction
-        ExecuteTransaction executeTransaction = new ExecuteTransaction();
+        ExecuteTransaction executeTransaction = new ExecuteTransaction(new Transaction("BUY","Bitcoin",5.0), new CountDownLatch(1));
 
         // Check if the ExecuteTransaction class implements the Runnable interface
         assertTrue(executeTransaction instanceof Runnable, "ExecuteTransaction should implement Runnable");
