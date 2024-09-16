@@ -50,11 +50,11 @@ describe("Tweet Box Section", () => {
     visitPageAndSetViewport(1079, 726);
 
     // Ensure the tweet-box element is visible in the viewport
-    ensureElementVisible(".tweet-box");
+    ensureElementVisible(".tweet-box-desktop");
 
     // Capture screenshot of the tweet-box element
     captureElementScreenshot(
-      ".tweet-box",
+      ".tweet-box-desktop",
       "provided-tweet-box",
       Cypress.env("TEST_THRESHOLD")
     );
@@ -78,7 +78,7 @@ describe("Tweet Box Section", () => {
 
     // Capture screenshot of the tweet-box element
     captureElementScreenshot(
-      ".tweet-box",
+      ".tweet-box-mobile",
       "MV-provided-tweet-box",
       Cypress.env("TEST_THRESHOLD")
     );

@@ -1,0 +1,764 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Poppins;
+    background-color: black;
+    color: white;
+}
+
+.mobile-view{
+    display: none;
+}
+.main-container {
+    margin-top: 0.5rem;
+    display: flex;
+    font-size: 1.2rem;
+    .navigation-section {
+        color: white;
+        padding-left: 1rem;
+        padding-top: 0.5rem;
+        .nav-icons {
+            width: 2.2vw;
+            margin-right: 1.2rem;
+            fill: white;
+        }
+        width: 20vw;
+        margin-right: 1rem;
+        font-size: 1rem;
+
+        .home {
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+        }
+        .twitter-icon {
+            margin-left: 1rem;
+        }
+
+        .nav-divs {
+            margin-left: 1rem;
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .post {
+            margin-left: 0rem;
+            background-color: #1d9bf0;
+            font-size: 1rem;
+            padding: 0.7rem;
+            text-align: center;
+            margin-top: 1rem;
+            border-radius: 2rem;
+            color: white;
+            margin-right: 1rem;
+            font-weight: bold;
+        }
+
+        .nav-profile-section {
+            position: fixed;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            padding-bottom: 1rem;
+            width: 20vw;
+            justify-content: space-between;
+            height: 8vh;
+            .photo-name {
+                display: flex;
+                margin-left: 0.5rem;
+                .photo-container {
+                    .photo {
+                        height: 3.8vw;
+                        width: 3.8vw;
+                        background-image: url("profile\ pic.png");
+                        background-size: cover;
+                        border-radius: 2rem;
+                        margin-right: 0.6rem;
+                    }
+                }
+
+                .name {
+                    font-size: 0.9rem;
+                    .userid {
+                        position: relative;
+                        bottom: 0.2rem;
+                        font-size: 0.9rem;
+                        color: gray;
+                    }
+                }
+            }
+        }
+    }
+
+    .tweet-section {
+        width: 60vw;
+        padding-top: 0.5rem;
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.4rem;
+            .for-you {
+                width: 40%;
+                text-align: center;
+                border-bottom: 3px solid #1d9bf0;
+                padding: 0.3rem;
+            }
+
+            .following {
+                text-align: center;
+                width: 40%;
+                padding: 0.3rem;
+            }
+
+            .setting {
+                fill: white;
+                width: 2.2vw;
+            }
+        }
+
+        .tweet-first {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            padding: 1rem;
+            .profile {
+                .tweet-profile-image {
+                    height: 3.8vw;
+                    width: 3.8vw;
+                    background-image: url("profile\ pic.png");
+                    background-size: cover;
+                    border-radius: 2rem;
+                    margin-right: 0.8rem;
+                }
+            }
+
+            .input-container {
+                height: 100%;
+                width: 100%;
+                input {
+                    height: 100%;
+                    width: 100%;
+                    font-size: 1.2rem;
+                    border: none;
+                    color: white;
+                    padding: 0.5rem;
+                }
+            }
+        }
+
+        .tweet-second {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .icons {
+                width: 20vw;
+                display: flex;
+                margin-left: 5vw;
+                .tweet-icons {
+                    margin-left: 2vw;
+                    width: 2vw;
+                    fill: #1d9bf0;
+                }
+            }
+
+            .btn-container {
+                margin-right: 1rem;
+                .tweet-btn {
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                    padding: 0.7rem;
+                    padding-right: 1.5rem;
+                    padding-left: 1.5rem;
+                    border-radius: 2rem;
+                    background-color: #1d9bf0;
+                    border: none;
+                }
+            }
+        }
+
+        .posts {
+            width: 60vw;
+            margin-top: 1rem;
+            padding: 1rem;
+            .testpost {
+                .post-first {
+                    display: flex;
+                    .post-test-profile {
+                        .post-test-profile-image {
+                            height: 3.9vw;
+                            width: 3.9vw;
+                            background-image: url("profile\ pic.png");
+                            background-size: cover;
+                            border-radius: 2rem;
+                            margin-right: 0.6rem;
+                        }
+                    }
+
+                    .post-content{
+                        width: 100%;
+                        .post-content-name-id{
+                            display: flex;
+                            align-items: flex-start;
+                            justify-content: space-between;
+                            width: 100%;
+                            font-size: 1rem;
+                            .main-name{
+                                display: flex;
+                                .post-content-item{
+                                    margin-right: 0.5rem;
+                                }
+
+                                .post-content-id{
+                                    color: gray;
+                                }
+
+                                .post-content-dot{
+                                    color: gray;
+                                }
+                                .time{
+                                    color: gray;
+                                }
+                            }
+
+                            .menu-more{
+                                width: 1.3vw;
+                                fill: gray;
+                                margin-right: 2rem;
+                            }
+                        }
+
+
+                        .tweet-content{
+                            font-size: 1rem;
+                        }
+                    }
+   
+                }
+
+                .second-half{
+                    display: flex;
+                    margin-top: 1rem;
+                    margin-left: 1rem;
+                    padding-left: 1rem;
+                    justify-content: flex-end;
+                    margin-right: 1.5rem;
+                    margin-bottom: 1rem;
+
+                    svg{
+                        fill: gray;
+                        width: 2vw;
+                        margin-left: 1rem;
+                    }
+                    .first-half-icons{
+                        width: 95%;
+                        display: flex;
+                        justify-content: space-between;
+                        .like{
+                            display: flex;
+                            .likes-count{
+                                margin-left: 0.3rem;
+                                display: none;
+                            }
+
+                            .unlike-post{
+                                fill: red;
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 794px){
+        .navigation-section{
+            width: 10vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .icon-content{
+                display: none;
+            }
+
+            .nav-icons{
+                width: 3vh;
+            }
+            .post{
+                margin-left: 1rem;
+            }
+
+            .nav-profile-section{
+                width: 10vw;
+                display: flex;
+                justify-content: center;
+                margin: 0;
+                bottom: 0;
+                left:0;
+                padding: 1rem;
+                .photo-name{
+                    display: flex;
+                    justify-content: center;
+                    .name{
+                        display: none;
+                    }
+                    .photo-container {
+                        .photo {
+                            height: 5vh;
+                            width:5vh;
+                            background-image: url("profile\ pic.png");
+                            background-size: cover;
+                            border-radius: 2rem;
+                        
+                        }
+                    }
+                }
+                .menu-more{
+                    display: none;
+                }
+            }
+        }
+
+        .tweet-section{
+            .header{
+                .setting{
+                    width:3vh;
+                }
+            }
+        }
+
+        
+        
+    }
+
+    @media screen and (min-width: 1400px) {
+
+        .navigation-section{
+            width: 15vw;
+            margin-top: 1rem;
+            margin-left: 15rem;
+            .nav-icons{
+                width: 1.8vw;
+            }
+
+            .nav-profile-section{
+                width: 15vw;
+
+                .photo-name{
+                    .photo-container{
+                        .photo{
+                            height: 3.5vw;
+                            width: 3.5vw;
+                        }
+                    }
+
+                    .name{
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }   
+        .tweet-section{
+            width: 50%;
+
+            .tweet-first{
+                .profile{
+                    .tweet-profile-image{
+                        height: 3.5vw;
+                        width: 3.5vw;
+                    }
+                }
+            }
+            .tweet-second{
+                
+                .icons{
+                    .tweet-icons{
+                        width:1.5vw;
+                    }
+                }
+
+                .btn-container{
+                    .tweet-btn{
+                        font-size: 1rem;
+                    }
+                }
+            }
+            .posts{
+                width: 100%;
+                .testpost{
+                    .post-first{
+                        .post-test-profile{
+                            .post-test-profile-image{
+                                height:3.5vw;
+                                width: 3.5vw;
+                            }
+                        }
+                    }
+                    .second-half{
+                        svg{
+                            width:1.5vw
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 496px) {
+    .desktop-view{
+        display: none;
+    }
+
+    .mobile-view{
+        display: block;
+        .mobile-nav{
+            margin: 1rem;
+            display: flex;
+            justify-content: space-between;
+            .mobile-nav-profile{
+               
+                .mobile-profile-image{
+                        height: 4vh;
+                        width: 4vh;
+                        background-image: url("profile\ pic.png");
+                        background-size: cover;
+                        border-radius: 2rem;
+                        margin-right: 0.6rem;
+
+                }
+                .navigation-section{
+                
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    padding: 1rem;
+                    height: 100%;
+                    z-index: 1;
+                    display: none;
+                    .nav-profile-part{
+                        width: 50vw;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        .nav-profile-part-image{
+                            height: 5vh;
+                            width: 5vh;
+                            background-image: url("profile\ pic.png");
+                            background-size: cover;
+                            border-radius: 2rem;
+                            margin-right: 0.6rem;
+                        }
+
+                        .plus-icon{
+                            border: 1px solid gray;
+                            height: 2vh;
+                            border-radius: 2rem;
+                            padding: 0.4rem;
+                            .plus-icon-svg{
+                                fill: white;
+                                width: 2vh;
+                            }
+                        }
+
+                    }
+
+                    .nav-profile-part-name{
+                        font-size: 1.2rem;
+                        font-weight: bold;
+                        margin-top: 0.5rem;
+                    }
+
+                    .nav-profile-part-id{
+                        color: gray;
+                    }
+
+                    .following-followers{
+                        display: flex;
+                        margin-top: 1rem;
+                        justify-content: center;
+                        margin-bottom: 2rem;
+                        .following{
+                            display: flex;
+                            margin-right: 2rem;
+                            .following-count{
+                                margin-right: 0.3rem;
+                            }
+                            .following-text{
+                                color: gray;
+                            }
+                        }
+                        .followers{
+                            display: flex;
+                            margin-right: 1.5rem;
+                            .followers-count{
+                                margin-right:0.3rem;
+                            }
+                            .followers-text{
+                                color: gray;
+                            }
+                        }
+                    }
+
+                    .mobile-navbar-options{
+                        .mobile-navbar-icons{
+                            fill: white;
+                            width: 3vh;
+                            margin-right: 1rem;
+                        }
+
+                        .mobile-navbar-option{
+                            display: flex;
+                            margin-top: 1rem;
+                            margin-bottom: 2rem;
+                            font-size: 1.2rem;
+                            font-weight: bold;
+                        }
+                    }
+
+                }
+            }
+
+            .mobile-nav-x-logo{
+                .mobile-nav-x-icon{
+                    fill: white;
+                    width: 4vh;
+                }
+            }
+
+            .mobile-nav-setting{
+                .mobile-nav-setting-icon{
+                    fill: white;
+                    width: 4vh;
+                }
+            }
+        }
+
+        .mobile-foryou-following-section{
+            display: flex;
+            justify-content: space-evenly;
+            font-size: 1.2rem;
+            border-bottom: 1px solid gray;
+          
+
+            .mobile-for-you-container{
+                border-bottom:5px solid #1d9bf0;
+                .mobile-for-you{
+                    padding: 1rem;
+                }
+            }
+
+            .mobile-following-container{
+                .mobile-following{
+                    padding: 1rem;
+                }
+            }
+        }
+
+        .mobile-bottom-container{
+            position: fixed;
+            bottom: 0vh;
+            padding: 0.5rem;
+            width: 100%;
+
+            .mobile-write-tweet{
+                position: fixed;
+                right: 4vh;
+                bottom: 7vh;
+                padding: 0.8rem;
+                border-radius: 3rem;
+                width: 4vh;
+                height: 4vh;
+                text-align: center;
+                background-color: #1d9bf0;
+                .write-tweet-icon{
+                    fill: white;
+                    width: 3vh;
+                    background-color: #1d9bf0;
+                }
+            }
+
+            .mobile-bottom-icons-div{
+                width: 100%;
+                display: flex;
+                justify-content: space-evenly;
+                .mobile-bottom-icons{
+                    fill: white;
+                    width: 3vh;
+                }
+            }
+        }
+
+        .tweet-box{
+            position: fixed;
+            top: 0;
+            padding: 1rem;
+            width: 92%;
+            height: 100%;
+            display: none;
+            .tweet-box-header{
+                display: flex;
+                justify-content: space-between;
+                .back-button{
+                    .back-button-icon{
+                        width: 3vh;
+                        fill: white;
+                    }
+                }
+
+                .drafts-posts{
+                    display: flex;
+                    font-size: 1rem;
+                    align-items: center;
+                    .drafts{
+                        margin-right: 2rem;
+                        color: #1d9bf0;
+                        font-weight: bold;
+                    }
+                    .post{
+                        background-color: #1d9bf0;
+                        padding: 0.5rem;
+                        border-radius: 2rem;
+                        width:6vh;
+                        text-align: center;
+                        font-weight: bold;
+                        border: none;
+                    }
+                }
+            }
+            .tweet-content-container{
+                display: flex;
+                align-items: center;
+                margin-top: 1rem;
+                .profile{
+                    .tweet-profile-image{
+                        height: 5vh;
+                        width: 5vh;
+                        background-image: url("profile\ pic.png");
+                        background-size: cover;
+                        border-radius: 2rem;
+                        margin-right: 0.8rem;
+                    }
+                }
+
+                .input-container{
+                    
+                    .post-input{
+                    font-size: 1rem;
+                    border: none;
+                    color: white;
+                    padding: 0.5rem;
+                    }
+                }
+            }
+
+            .everyone-can-reply{
+                display: flex;
+                margin-top: 4rem;
+                margin-left: 0.6rem;
+                .everyone-can-reply-icon{
+                    width:2vh;
+                    fill: #1d9bf0;
+                }
+                .everyone-can-reply-content{
+                    margin-left: 0.3rem;
+                    color: #1d9bf0;
+                    font-weight: bold;
+                }
+            }
+
+            .mobile-tweet-box-icons{
+                display: flex;
+                margin-top: 1rem;
+                margin-left: 1rem;
+                .mobile-tweet-box-icon{
+                    fill: #1d9bf0;
+                    width: 2vh;
+                    margin-right: 1rem;
+                }
+            }
+        }
+
+        .posts-mobile-view{
+            .mobile-post-template{
+                padding: 1rem;
+                .mobile-post-first-half{
+                    display: flex;
+                    align-items: center;
+                    .mobile-post-profile{
+                        .mobile-post-image{
+                            height: 5vh;
+                            width: 5vh;
+                            background-image: url("profile\ pic.png");
+                            background-size: cover;
+                            border-radius: 2rem;
+                            margin-right: 0.6rem;
+                        }
+                    }
+
+                    .mobile-post-content{
+                        width: 100%;
+                        .mobile-post-name-id{
+                            display: flex;
+                            justify-content: space-between;
+
+            
+                                .mobile-post-main-name{
+                                    display: flex;
+                                    .id-time{
+                                        color: gray;
+                                        margin-left: 0.2rem;
+                                    }
+                                }
+
+                            .mobile-post-menu-more{
+                                .mobile-post-nav-icons{
+                                    width:2.2vh;
+                                    fill:gray;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .mobile-post-comment-icons{
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 1rem;
+                    margin-left: 1rem;
+                    margin-bottom: 1rem;
+                    .mobile-post-icon{
+                        width:2.5vh;
+                        fill: gray;
+                    }
+
+                    .mobile-icons-first-half{
+                        width: 90%;
+                        display: flex;
+                        justify-content: space-between;
+
+                        .mobile-like{
+                            display: flex;
+                            align-items: center;
+                            .likes-count-mobile{
+                                margin-left: 0.5rem;
+                            }
+                            .likes-count{
+                                display: none;
+                            }
+
+                            .unlike-post{
+                                fill: red;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    
+}
