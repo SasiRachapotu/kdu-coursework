@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Socket</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <div class="main-container">
+        <h1 id="header">KDU CHAT APP</h1>
+        <div id="messages">
+            <div class="message-div-you">
+                <div class="profile-container">
+                    <div class="profile-image">
+                        Y
+                    </div>
+                </div>
+                <div class="message-content">
+                    Hello how are you??
+                </div>
+            </div>
+            <div class="message-div">
+                <div class="profile-container">
+                    <div class="profile-image">
+                        U
+                    </div>
+                </div>
+                <div class="message-content">
+                    I am fine!! and how are you??
+                </div>
+            </div>
+        </div>
+
+        <div class="input-container">
+            <input type="text" id="msgInput" placeholder="Enter your message">
+            <button id="sendMessage">
+                <i class="fa-solid fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/ad75739388.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.socket.io/4.7.4/socket.io.min.js" integrity="sha384-Gr6Lu2Ajx28mzwyVR8CFkULdCU7kMlZ9UthllibdOSo6qAiN+yXNHqtgdTvFXMT4" crossorigin="anonymous"></script>
+    <script src="./scripts/utill.js"></script>
+</body>
+</html>

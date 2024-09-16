@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins, sans-serif;
+}
+
+html {
+  font-size: 16px;
+}
+
+.main-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #0E3B43;
+  box-sizing: border-box;
+}
+.main-container #header {
+  background-color: #DFE1E6;
+  padding: 1rem;
+  padding-left: 2.5rem;
+  box-sizing: border-box;
+  height: 8vh;
+}
+.main-container .input-container {
+  box-sizing: border-box;
+  margin: 1rem;
+  width: 98%;
+  margin-right: 6rem;
+  position: fixed;
+  left: 0;
+  bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 1rem;
+}
+.main-container .input-container #msgInput {
+  width: 90%;
+  font-size: 1.5rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 1rem;
+}
+.main-container .input-container #msgInput:focus {
+  outline: none;
+}
+.main-container .input-container #sendMessage {
+  margin: 1rem;
+  margin-left: 2rem;
+  font-size: 1.5rem;
+  padding: 1rem;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+.main-container .input-container #sendMessage i {
+  font-size: 2rem;
+}
+.main-container .input-container .inactive-button {
+  background-color: gray;
+  cursor: crosshair;
+}
+.main-container #messages {
+  margin-top: 1rem;
+  overflow: scroll;
+  overflow-x: hidden;
+  height: 75vh;
+  width: 100%;
+  background-color: #0E3B43;
+}
+.main-container #messages .message-div {
+  width: 90%;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  display: flex;
+}
+.main-container #messages .message-div .profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #57B6A3;
+  font-size: 2rem;
+  height: 2rem;
+  width: 2rem;
+  padding: 1rem;
+  border-radius: 3rem;
+}
+.main-container #messages .message-div .message-content {
+  background-color: aliceblue;
+  padding: 1rem;
+  border-radius: 6px;
+  display: flex;
+  font-size: 1.5rem;
+  align-items: center;
+  margin-left: 1rem;
+}
+.main-container #messages .message-div-you {
+  width: 90%;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  display: flex;
+}
+.main-container #messages .message-div-you .profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #DA9F93;
+  font-size: 2rem;
+  height: 2rem;
+  width: 2rem;
+  padding: 1rem;
+  border-radius: 3rem;
+}
+.main-container #messages .message-div-you .message-content {
+  background-color: aliceblue;
+  padding: 1rem;
+  border-radius: 6px;
+  display: flex;
+  font-size: 1.5rem;
+  align-items: center;
+  margin-left: 1rem;
+}
+.main-container #messages::-webkit-scrollbar {
+  display: none;
+}/*# sourceMappingURL=style.css.map */
