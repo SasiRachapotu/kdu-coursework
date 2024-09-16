@@ -1,0 +1,20 @@
+.hobbies{
+    padding: 1rem;
+    width: 45%;
+    background-color: #b2f2bb;
+    border: 2px solid #f08c03;
+}
+
+.hobbies-header{
+    color: #f08c03;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.hobby-list-item{
+    font-size: 1.5rem;
+    list-style-type: none;
+    color: #2f9e44;
+    margin: 1rem;
+    font-weight:bold;
+}

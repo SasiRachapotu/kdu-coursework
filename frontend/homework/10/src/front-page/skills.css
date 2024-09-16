@@ -1,0 +1,20 @@
+.skills{
+    padding: 1rem;
+    width: 45%;
+    background-color: #a5d8ff;
+    border: 2px solid #f08c03;
+}
+
+.skills-header{
+    color: #f08c03;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.skills-list-items{
+    list-style-type: none;
+    color: #2f9e44;
+    font-size: 1.5rem;
+    margin: 1rem;
+    font-weight:bold;
+}
