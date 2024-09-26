@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html Explore</title>
+    <style>
+        .nav{
+            width:100%;
+            height: 100%;
+        }
+        .builders{
+            height: 50vh;
+            display: flex;
+            margin: 1%;
+            justify-content:space-evenly;
+            align-items: center;
+            width: 100%;
+        }
+        .leftbuilders{
+            width: 50%;
+        }
+        .rightbuilder{
+            width:25%;
+        }
+
+        .ceo{
+            width: 100%;
+            height:30vh;
+            background-image: url(https://images.squarespace-cdn.com/content/v1/587fc3e546c3c40b37363b71/1686772620553-P2R67UHSVJR96HOQ2PXC/Diligence-Header-Opt-3.png?format=2500w);
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content:space-evenly;
+            color: white;
+        }
+
+        .image{
+            background-image: url(https://cdn-icons-png.flaticon.com/512/149/149071.png);
+            height: 5rem;
+            width: 5rem;
+            background-size: cover;
+        }
+
+        .sampleimages{
+            margin:2rem;
+        }
+
+        .form{
+            display: flex;
+            width: 100%;
+            height: auto;
+            align-items: center;
+            justify-content: center;
+            margin: 1rem;
+        }
+        footer{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            height: 5rem;
+            background-color: black;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- All the header content goes here -->
+    <header>
+        <h1>KICKDRUM WEBSITE</h1>
+        <div class= "nav" style="background-image:'https://images.squarespace-cdn.com/content/v1/587fc3e546c3c40b37363b71/1572274776794-X28FOBF0QUT8T1UPBGHM/Home-Header-Opt-1-Dark.png?format=2500w'">
+            <nav>
+                <ul>
+                    <li><a target="_blank" href="services.html">SERVICES</a></li>
+                    <li><a target="_self" href="results.html">RESULTS</a></li>
+                    <li><a target="_parent" href="team.html">TEAM</a></li>
+                    <li><a target="_top" href="kickdrum.html">KICKDRUM</a></li>
+                    <li><a target ="_self" href="resources.html">RESOURCES</a></li>
+                    <li><a target="_self" href ="contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="builders">
+            <div class="leftbuilders">
+                <h3>Builders. Not box checkers</h3>
+                <section>
+                <ol>
+                    <li>We are enterprise-grade engineers, architects, and strategists. With a design-driven philosophy, our development approach decreases technical debt, improves customer experiences, and increases enterprise value.</li>
+                    <br><br>
+                    <li>We partner with both investors and their portfolio companies across the full lifecycle - from diligence through divestiture – to identify, plan, and execute technology strategies for revenue growth, profit optimization, and value enhancement.</li>
+                    <br><br>
+                    <li>Our work pre- and post-transaction is investment-driven - from our proven maturity assessment model to our value creation solutions, we bring real-world operating wisdom to your process.</li>
+                </ol>
+            </section>
+                
+            </div>
+            <div class="rightbuilder">
+                <section>
+                    <h1>$20 B</h1>
+                    <h6>total Transactional volume</h6>
+                    <h1>150+</h1>
+                    <h6>Transactions Advised</h6>
+                    <h1>22+</h1>
+                    <h6>Former CXOs on our US-based team</h6>
+                    <h1>$150M</h1>
+                    <h6>AWS Cloud Contracts</h6>
+                </section>  
+            </div>
+        </div>
+        <div class="ceo">
+            <div class="image">
+            </div>
+            <div class="about">
+                <p>
+                “Kickdrum's team is world class. They delivered on several large and complex challenges that helped transform the value of our business and the excitement of our customers.”
+                </p>
+            </div>
+        </div>
+        <h3>Kickdrum images</h3>
+        <div class="sampleimages">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipNfgkRbJdXdRiMO5IKLfEJJLDH2KHAkhUXFk8Jf=s680-w680-h510">   
+        </div>
+        <h3>Sample paragraph</h3>
+        <p>
+            This is a <em>sample</em> paragraph with <strong>formatted text</strong>. 
+            You can use <sup>superscript</sup> for various purposes or <sub>subscript</sub> for various other purposes
+            Additionally, you can <u>underline</u> or <s>strikethrough</s> text for emphasis or removal, respectively.
+            <br>
+            <em><strong>Combining</strong></em> styles is also possible.
+        </p>
+        <aside>
+            <p>
+                Aside content
+            </p>
+        </aside>
+        <code> cout&lt;&lt;"Hello World"</code>
+        <pre>
+            demonstration of pre tag
+
+            hello
+        </pre>
+        <article>This is article..</article>
+
+        <div class="list">
+
+        </div>
+        <h4 style="text-align: center;">
+            Contact form
+        </h4>
+        <div class="form">
+            <form action="#" method="#">
+
+                <!-- Text Area -->
+                <label for="textarea">feedback:</label>
+                <textarea id="textarea" name="textarea" rows="4" cols="50" tabindex="1"></textarea>
+            
+                <br><br>
+            
+                <!-- Radio Buttons -->
+                <label for="gender" tabindex="2">Gender</label>
+                <label>
+                  <input type="radio" name="gender" value="male">
+                  Male
+                </label>
+                <label>
+                  <input type="radio" name="gender" value="female">
+                  Female
+                </label>
+            
+                <br><br>
+            
+                <label for="interests" tabindex="3">interests</label>
+                <label>
+                  <input type="checkbox" name="interests" value="programming">
+                  Programming
+                </label>
+                <label>
+                  <input type="checkbox" name="interests" value="design">
+                  Design
+                </label>
+            
+                <br><br>
+            
+                <!-- Select -->
+                <label for="selectOptions" tabindex="4">Select:</label>
+                <select id="selectOptions" name="selectOptions">
+                  <option value="option1">Option 1</option>
+                  <option value="option2">Option 2</option>
+                </select>
+            
+                <br><br>
+            
+                <!-- Password -->
+                <label for="password" >Password:</label>
+                <input type="password" id="password" name="password" tabindex="5">
+            
+                <br><br>
+            
+                <!-- Number -->
+                <label for="quantity">Number:</label>
+                <input type="number" id="quantity" name="quantity" min="1" max="10">
+            
+                <br><br>
+            
+                <!-- Telephone -->
+                <label for="telephone">Telephone:</label>
+                <input type="tel" id="telephone" name="telephone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required>
+            
+                <br><br>
+            
+                <!-- Search -->
+                <label for="search">Search:</label>
+                <input type="search" id="search" name="search">
+            
+                <br><br>
+            
+                <!-- Submit & Reset Buttons -->
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            
+              </form>
+            
+        </div>
+    </main>
+
+    <footer>
+            <p>&copy; 2024 Your Website Name. All rights reserved.</p>
+            <blockquote cite="https://www.kickdrum.com/">Kickdrum's team is world class. They delivered on several large and complex challenges that helped transform the value of our business and the excitement of our customers.</blockquote>
+    </footer>
+</body>
+</html>
+
